@@ -13,6 +13,8 @@
 }
 
 .header {
+  padding: 2em;
+  display: block;
   font-family: 'Sonsie One', cursive, serif;
   display: inline-block;
   vertical-align: middle;
