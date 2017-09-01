@@ -56,5 +56,6 @@ h1 {
   background-size: contain;
   width: 100%;
   padding: 2em;
-  
+  min-height: 500px;
+  min-width: 100%
 }
