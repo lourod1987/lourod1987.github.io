@@ -1,0 +1,59 @@
+.pic-frame {
+  border-color: light blue;
+  border-width: 8px;
+  border-style: solid;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 25px;
+}
+
+.smaller-image {
+  width: 600px;
+  
+  }
+
+.background-color{
+  background-color: #111111;
+}
+
+.p-text-color {
+  color: #CCCCCC;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+.p-bg-border {
+  background-color: #222222;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.fancy-quote {
+  color: #0088CC;
+  font-size: 32px;
+  font-family: Monospace;
+  margin: auto;
+}
+
+.quote-cred {
+  color: #888888;
+  font-size: 16px;
+  font-family: Monospace;
+  margin-left: 100px;
+}
+
+.sub-title {
+  color: #007777;
+}
+
+.for-margin {
+  margin-left: 25px;
+}
+
+#backtohome {
+    margin: 20px;
+}

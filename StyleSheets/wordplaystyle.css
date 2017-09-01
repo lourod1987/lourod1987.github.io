@@ -1,0 +1,18 @@
+.header {
+  text-align: left;
+  margin: 10px 10px;
+}
+
+h1 {
+  margin: 50px 10px;
+}
+
+
+body {
+  text-align: center;
+}
+
+#warning{
+  color: red;
+  font-size: 20px;
+}
