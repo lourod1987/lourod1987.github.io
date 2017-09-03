@@ -20,14 +20,27 @@ a {
     color: #defff2;
 }
 
-a:hover {
-   color: red;
+.nav-bar a {
+    padding: 20px;
 }
 
+.projects a {
+    padding: 10px;
+}
 
+a:hover {
+   color: #000009;
+   background: #fcf7f7;
+   border: 1px solid #000009;
+   border-radius: 3px;
+   font-weight: bold;
+}
+
+/*
 a:visited {
   color: grey;
 }
+*/
 
 
 a:active {
@@ -69,6 +82,7 @@ main h2, main h3 {
   -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(60%, 0%);*/
+    width: auto;
 }
 
 #logo {
@@ -82,6 +96,7 @@ main h2, main h3 {
   -webkit-animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(90%, 0%);*/
+    width: auto;
 }
 
 @keyframes slide-in{
