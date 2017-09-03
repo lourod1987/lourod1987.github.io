@@ -112,7 +112,8 @@ main h2, main h3 {
 footer h2 {
     color: #1d0049;
     font-weight: bold;
-    margin: 10px 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     padding: 0.5em;
 }
 
@@ -121,7 +122,8 @@ footer a {
     background: #1d0049;
     padding: 10px;
     border-radius: 10px;
-    margin: 10px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 1.1em;
 }
 
@@ -131,7 +133,8 @@ footer a:hover {
     font-weight: bold;
     border: 3px solid #1d0049;
     border-radius: 5px;
-    margin: 10px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 1.2em;
 }
 
