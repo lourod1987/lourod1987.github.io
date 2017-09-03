@@ -1,3 +1,10 @@
+/*CSS Styles should move from general to more specific
+*Breaking css into sections using comments can assist in readability
+==============================================================================*/
+
+
+/*Global Styles
+===============================*/
 * {
   /*background-color:  #222222; */
   margin: 0;
@@ -5,12 +12,34 @@
   box-sizing: border-box;
 }
 
-#logo {
-  margin-top: -15px;
-  margin-bottom: -5px;
-  display: inline-block;
-  vertical-align: middle;
-  transform: translate(90%, 0%);
+.projects-button {
+  cursor: pointer;
+}
+
+a:hover {
+   color: red;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:active {
+    
+}
+
+a:focus {
+    outline: ;
+}
+
+
+
+
+/* Header and Footer
+===============================*/
+.forBGTemp, footer {
+    background: #fcf7f7;
+    min-height: 100px;
 }
 
 .header {
@@ -22,7 +51,20 @@
   transform: translate(60%, 0%);
 }
 
-.whole-body {
+#logo {
+  margin-top: -15px;
+  margin-bottom: -5px;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(90%, 0%);
+}
+
+
+
+main {
+  font-family: Helvetica;
+  padding: 2em;
+  background-color: whitesmoke;
   background-image: -webkit-linear-gradient(#666CCC, #440094);
   /*#BC1324*/
   background-size: contain;
@@ -35,6 +77,8 @@
   color: azure;
 }
 
+/* Navigation Bar
+===============================*/
 .nav-bar {
   background-color: #111111;
   color: azure;
@@ -54,28 +98,17 @@
  padding: 10px, 5px;
 }
 
-.projects-button {
-  cursor: pointer;
-}
-
-a:hover {
-   color: red;
-}
-
-a:clicked {
-  color: grey;
-}
-
 
 body {
-  font-family: Helvetica;
-  padding: 2em;
-  background-color: whitesmoke;
+ 
 }
 
 /*h1 {
   font-size: 2.5em;
 }*/
+
+/* Skillset Menus
+===============================*/
 
 .skillset {
   display: flex;
