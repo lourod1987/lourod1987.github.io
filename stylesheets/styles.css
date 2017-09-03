@@ -40,10 +40,13 @@ a:focus {
 }
 
 
-main p {
+main p, main li {
     color: #fcf7f7;
 }
 
+main h2, main h3 {
+    color: #666ccc;
+}
 
 
 /* Header and Footer
