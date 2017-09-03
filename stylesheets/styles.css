@@ -92,7 +92,6 @@ a:focus {
 main {
   font-family: Helvetica;
   padding: 2em;
-  background-color: whitesmoke;
   background-image: -webkit-linear-gradient(#666CCC, #440094);
   /*#BC1324*/
   background-size: contain;
