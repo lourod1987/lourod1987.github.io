@@ -16,13 +16,19 @@
   cursor: pointer;
 }
 
+a {
+    color: #defff2;
+}
+
 a:hover {
    color: red;
 }
 
+
 a:visited {
   color: grey;
 }
+
 
 a:active {
     border: 1px dotted #fcf7f7;

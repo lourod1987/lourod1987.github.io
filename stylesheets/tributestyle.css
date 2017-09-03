@@ -20,29 +20,36 @@
   color: #CCCCCC;
   font-size: 15px;
   word-wrap: break-word;
+  text-align: justify;
+  margin: 5px auto;
+}
+
+h3.listTitle{
+  color: #CCCCCC;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px auto; 
 }
 
 .p-bg-border {
   background-color: #222222;
   border-radius: 15px;
-  margin-bottom: 15px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  margin: 15px auto;
+  padding: 10px 30px;
+ 
 }
 
 .fancy-quote {
   color: #0088CC;
   font-size: 32px;
-  font-family: Monospace;
+  font-family: Monospace, sans-serif;
   margin: auto;
 }
 
 .quote-cred {
   color: #888888;
   font-size: 16px;
-  font-family: Monospace;
+  font-family: Monospace, sans-serif;
   margin-left: 100px;
 }
 
