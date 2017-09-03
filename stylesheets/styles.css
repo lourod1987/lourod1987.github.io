@@ -17,7 +17,7 @@
 }
 
 a {
-    color: #defff2;
+    color: #fcf7f7;
 }
 
 .nav-bar a {
@@ -107,6 +107,37 @@ main h2, main h3 {
 @keyframes slide-in-2{
     from {transform: translate(170%, 0%);}
     to {transform: translate(0%, 0%);}
+}
+
+footer h2 {
+    color: #1d0049;
+    font-weight: bold;
+    margin: 10px 5px;
+    padding: 0.5em;
+}
+
+footer a {
+    color: #fcf7f7;
+    background: #1d0049;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    padding: 1.1em;
+}
+
+footer a:hover {
+    color: #1d0049;
+    background: #fcf7f7;
+    font-weight: bold;
+    border: 3px solid #1d0049;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 1.2em;
+}
+
+footer p {
+    margin-top: 20px;
+    padding: 1.1em;
 }
 
 
