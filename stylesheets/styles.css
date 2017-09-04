@@ -5,11 +5,14 @@
 
 /*Global Styles
 ===============================*/
-* {
-  /*background-color:  #222222; */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .projects-button {
@@ -67,13 +70,14 @@ main h2, main h3 {
 .forBGTemp, footer {
     background: #fcf7f7;
     min-height: 75px;
+/*    overflow: auto;*/
 }
 
 .header {
   font-family: 'Sonsie One', cursive, serif;
   display: inline-block;
   vertical-align: middle;
-  margin:  0 10px;
+/*  margin:  0 10px;*/
   text-align: center;
   animation-name: slide-in;
   animation-duration: 1s;
@@ -82,12 +86,32 @@ main h2, main h3 {
   -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(60%, 0%);*/
-    width: auto;
+/*    width: 40%;*/
 }
 
+/*
+.header h1, .header h2 {
+  display: block;
+  width: 500px;
+  margin:  0 auto;
+  text-align: center;
+}
+*/
+
+/*
+.forBGTemp img {
+    display: inline-block;
+  width: 240px;
+  margin:  0 auto;
+}
+*/
+
 #logo {
-  margin: 15px 10px;
   display: inline-block;
+/*  float: left;*/
+  text-align: center;
+/*  margin: 15px 10px;*/
+  margin: 15px auto;
   vertical-align: middle;
   animation-name: slide-in-2;
   animation-duration: 1.1s;
@@ -96,8 +120,17 @@ main h2, main h3 {
   -webkit-animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(90%, 0%);*/
-    width: auto;
+  width: 240px;
 }
+
+/*clear fix hack*/
+/*
+.forBGTemp:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+*/
 
 @keyframes slide-in{
     from {transform: translate(80%, 0%);}
@@ -174,7 +207,7 @@ main {
   background-image: -webkit-linear-gradient(#666CCC, #440094);
   /*#BC1324*/
   background-size: contain;
-  width: 100%;
+  max-width: 100%;
   padding: 2em;
   min-height: 800px;
 }
@@ -183,9 +216,11 @@ main {
   color: azure;
 }
 
+/*
 body {
  
 }
+*/
 
 /*h1 {
   font-size: 2.5em;
