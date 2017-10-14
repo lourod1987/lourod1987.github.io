@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Project 1 - Luis Rodriguez III</title>
+		<script type="text/javascript">
+		/* Defining a function to call to run this program. Makes the code resusable and also allows us to call the function to run again after each if/else statement terminates itself */
+		function projectRun(string){
+			console.log("--Program - Main Menu--");
+			var input = prompt("Please enter 1, 2, 3, or Exit:");
+			/* I used these variables just to keep the code a little cleaner but they are not necessary. */
+			var mod1 = "-blip";
+			var mod2 = "-clang";
+		
+			/* This first if statement allows the program to catch when nothing has been entered.  */
+			if(input == ""){
+				console.log("You must enter one of the above values.")
+				projectRun(string)
+				
+			} /*else if(input != "1" || "2" || "3" || "EXIT" || "Exit" || "exit"){ This could be potentially used to solve the programs exit problem. Currently the program exits with any characters not set up to be responded to. Code from here: else if(input == "A" || "B" || "C" ||"D" || "E" || "F" || "G" || "H" || "I" || "J" || "K" || "L" || "M" || "N" || "O" || "P" || "Q" || "R" || "S" || "T" || "U" || "V" || "X" || "Y" || "Z"abcdefghijklmnopqrstuvwxyz457890-=[]\;',./?><":|}{!@#$%^&*()_+"){
+				console.log("You must enter one of the above values.")
+				console.log("You did not input a valid command.")
+				projectRun(string)
+			
+			}*/else if(input == "1"){
+				console.log("--Program 1--");
+				var string = prompt("Enter a string:");
+				
+				/* This first nested if statement allows us to catch when no value has been entered for our string prompt */
+				if(string == "") {
+					console.log("You need to enter some text for 'Enter a string'.");
+					string = prompt("Enter a string:");
+					projectRun(string)
+				} else {
+					if(string != ""){
+						console.log("String recorded, string length is " + string.length);
+						console.log(string);
+						projectRun(string)
+					} else {
+						console.log("An error has occurred!");
+					}
+				projectRun(string)
+				}
+				
+			} else if(input == "2") {
+				console.log("--Program 2--");
+				
+				if(string != ""){
+					if(string.search(mod1 || mod2) == true){
+						console.log(string);
+						console.log("String has already been translated into robot language.");
+						projectRun(string)
+					} else {
+						var ar = string.split(" ");
+						console.log("This is ar:", ar);
+						console.log("This is ar[0]: ",ar[0]);
+						console.log("This is the length of ar array: ", ar.length)
+						var newArray = [];
+						console.log("This is what is in the newArray: ", newArray);
+						var x = 0;
+						console.log("X count: ", x);
+						
+						for(i = 0; i <= ar.length - 1; i++){
+							if(ar[x].length >= 5){
+								var combine = ar[x].concat(mod1);
+								console.log("This is the combine variable: ", combine);
+								newArray.push(combine)
+								console.log("This is what is in the newArray: ", newArray);
+								x += 1;
+								console.log("X count: ", x);
+							} else {
+								if(ar[x].length < 5){
+									var combine = ar[x].concat(mod2);
+									newArray.push(combine)
+									console.log("This is what is in the newArray: ", newArray);
+									x += 1;
+									console.log("X count: ", x);
+								} else {
+									console.log("An error has occurred!");
+								}
+							}
+						}
+					string = newArray.join(" ");
+					console.log(string);
+					console.log("String converted");
+					projectRun(string)
+					} 
+				} else {
+					console.log("You must enter a String by using option '1'.");
+					projectRun(string)
+				}
+				
+			} else if(input == "3") {
+				console.log("--Program 3--");
+				
+				if(string == ""){
+					console.log("You need to convert your string first by using option '2', after you've entered a string in option '1'.");
+					projectRun(string)
+				} else if(string != ""){
+					if (string.includes(mod1 || mod2) == true){
+						console.log(string);
+						string = "";
+						projectRun(string)
+					} else {
+						console.log("This string has not been modified: ", string);
+						console.log("Please use option '2' in order to convert the string to 'ROBOT Language'");
+						document.write(string.includes(mod1 || mod2));
+						projectRun(string)
+					}
+				} else {
+					console.log("This string has not been modified: ", string);
+					console.log("Please use option '2' in order to convert the string to 'ROBOT Language'");
+					document.write(string.includes(mod1 || mod2));
+					projectRun(string)
+				}
+				
+			} else if(input == "Exit" || "EXIT" || "exit") {
+				console.log("--Program Exit--");
+				console.log("Thank you for using ROBOT Language Converter!");
+			
+			} else {
+				console.log("You did not input a valid command.")
+				projectRun(string)
+			}
+		}
+		
+		var string = "";
+		projectRun(string)
+		</script>
+	</head>
+	
+	<body>
+
+	</body>
+</html> 
