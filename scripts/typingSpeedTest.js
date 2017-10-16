@@ -33,8 +33,8 @@ function spellCheck() {
     let originTextMatch = originText.substring(0, textEntered.length);
     
     if (textEntered == originText) {
-        clearInterval(interval);
         testWrappper.style.borderColor = "#008000";
+        clearInterval(interval);
     } else {
         if (textEntered == originTextMatch) {
             testWrapper.style.borderColor = "#65CCf3";
