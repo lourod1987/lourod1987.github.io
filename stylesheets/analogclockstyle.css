@@ -17,7 +17,7 @@
     fill: none;
     stroke: #e06d06;
     stroke-width: 18;
-    stroke-miterlimit: 19;
+    stroke-miterlimit: 10;
 }
 
 .mid-circle {
