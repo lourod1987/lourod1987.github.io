@@ -34,12 +34,12 @@ function spellCheck() {
     
     if (textEntered == originText) {
         clearInterval(interval);
-        testWrappper.style.borderColor = "green";
+        testWrappper.style.borderColor = "#008000";
     } else {
         if (textEntered == originTextMatch) {
             testWrapper.style.borderColor = "#65CCf3";
         } else {
-            testWrapper.style.borderColor = "red";
+            testWrapper.style.borderColor = "#8B0000";
         }
     }
     
