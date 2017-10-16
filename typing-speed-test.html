@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS Typing Speed Test</title>
     <script src="scripts/typingSpeedTest.js" async></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+<!--    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">-->
     <link rel="stylesheet" href="stylesheets/typingspeedteststyle.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,7 +23,9 @@
         </article><!-- .intro -->
         <section class="test-area">
             <div id="origin-text">
-                <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+<!--                <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!</p>-->
+                <p id="alter">Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.</p>
+<!--                <p>Hello world. It is a nice day.</p>-->
             </div><!-- #origin-text -->
 
             <div class="test-wrapper">
@@ -31,6 +33,11 @@
             </div><!-- .test-wrapper -->
 
             <div class="meta">
+                <section class="additionalData">
+                    <p>Total Errors: <strong id="errors">---</strong></p>
+                    <p>Words per minute: <strong id="wpm">---</strong></p>
+                    <p>Accuracy: <strong id="accuracy">---</strong></p>
+                </section>
                 <section id="clock">
                     <div class="timer">00:00:00</div>
                 </section>
