@@ -30,6 +30,8 @@ window.onload = function() {
     switchText();
     reset();
     getWordCount();
+    console.log(getWordCount());
+    console.log(wordCount);
 };
 
 //Function for changing text for speed typing test
@@ -42,11 +44,13 @@ function switchText() {
     console.log("This is the current word count for the selected array: " + manyText[arrCount][0].length);
     
     
+    
     if (arrCount >= manyText.length) {
         arrCount = 0;
     }
     
     reset();
+    getWordCount();
 }
 
 //Function is used to accurately get a word count for each piece of text
@@ -56,6 +60,7 @@ function getWordCount() {
             wordCount++;  
         }
     }
+    console.log("Total word count at end of getWordCount func: " + wordCount);
 }
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
