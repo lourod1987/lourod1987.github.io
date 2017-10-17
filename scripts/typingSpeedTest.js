@@ -30,6 +30,7 @@ function switchText() {
     changeOriginText.innerHTML= manyText[arrCount];
     arrCount++;
     console.log("This is the current array selection: " + manyText[arrCount]);
+    console.log("This is the current word count for the selected array: " + manyText[arrCount].length);
     
     
     if (arrCount >= manyText.length) {
@@ -61,6 +62,7 @@ function runTimer() {
 // Match the text entered with the provided text on the page:
 function spellCheck() {
     let textEntered = testArea.value;
+    console.log("Text entered value based on testArea.value: " + textEntered);
     let originTextMatch = changeOriginText.innerHTML.substring(0, textEntered.length);
     
     if (textEntered == changeOriginText.innerHTML) {
