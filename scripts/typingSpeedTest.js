@@ -59,7 +59,7 @@ function getWordCount() {
     var index= 0;
     console.log("initial index: " + index);
     for (i = 0; i <= manyText.length; i++) {
-        for (x = 0; x <= manyText[index]; x++) {
+        for (x = 0; x <= manyText[index].length; x++) {
             arr.push();
             index++;
             console.log("current index: " + index);
