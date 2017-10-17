@@ -56,8 +56,12 @@ function switchText() {
 //Function is used to accurately get a word count for each piece of text
 function getWordCount() {
     var arr = [];
-    for (i = 0; i <= manyText[i].length; i++) {
+    var index= 0;
+    console.log("initial index: " + index);
+    for (i = 0; i <= manyText[index].length; i++) {
         arr.push();
+        index++;
+        console.log("current index: " + index);
         console.log("Array for holding each word from a single text: " + arr)
     }
     wordCount = arr.length;
