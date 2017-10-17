@@ -90,7 +90,7 @@ function spellCheck() {
         accuracy = ((changeOriginText.innerHTML.length / 5) - typingError) / changeOriginText.innerHTML.length;
         console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
-        if (accuracy === 0.1 || accuracy <== -0.1) {
+        if (accuracy === 0.1 || accuracy <= -0.1) {
             accuracy = Math.round(accuracy * 1000);
         } else {
             accuracy = Math.round(accuracy * 100);
