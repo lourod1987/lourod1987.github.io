@@ -109,7 +109,7 @@ function spellCheck() {
 // Start the timer:
 function start() {
     let textEnteredLength = testArea.value.length;
-    wordCountDisplay = changeOriginText.innerHTML.length;
+    wordCountDisplay.innerHTML = changeOriginText.innerHTML.length;
     console.log("word count disp: " + wordCountDisplay);
     
     if (textEnteredLength === 0 && !timerRunning) {
