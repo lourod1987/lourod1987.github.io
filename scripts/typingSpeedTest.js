@@ -10,7 +10,7 @@ var accuracyDisplay = document.querySelector("#accuracy");
 var changeOriginText = document.querySelector("#alter");
 var wordCountDisplay = document.querySelector("#wordcount");
 
-var manyText = ["This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!", "Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.", "Hello world. It is a nice day.", "The 1910 Cuba hurricane was said to be one of the worst tropical cyclones that has ever hit Cuba. The storm formed in the southern caribbean sea on October 9, 1910.", "It grew stronger as it moved northwest. It then made landfall on the western end of Cuba. The storm made a loop over open water, and then began moving towards the United States."];
+var manyText = ["Test", "Click anywhere on this box to change the text you are taking your speed typing test with! The text in this box is your typing test text. All tests are great for practice. Including this informational text. Practice, practice, practice! Oh, and this is text is only available before you click to change to the new text. All of the following text are available and can be looped through until you reach the desired text.", "This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!", "Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.", "Hello world. It is a nice day.", "The 1910 Cuba hurricane was said to be one of the worst tropical cyclones that has ever hit Cuba. The storm formed in the southern caribbean sea on October 9, 1910.", "It grew stronger as it moved northwest. It then made landfall on the western end of Cuba. The storm made a loop over open water, and then began moving towards the United States."];
 var arrCount = 0;
 var timer = [0, 0, 0, 0];
 var interval;
@@ -25,11 +25,12 @@ console.log("This is changeOriginText var: " + changeOriginText);
 console.log("This is the current array selection: " + manyText[arrCount]);
 
 window.onload = function() {
-  changeOriginText.innerHTML= manyText[arrCount];
+  switchText();
 };
 
 //Function for changing text for speed typing test
 function switchText() {
+    changeOriginText.innerHTML= manyText[arrCount];
     console.log("arrCount before increment: " + arrCount)
     arrCount++;
     console.log("arrCount after increment: " + arrCount)
