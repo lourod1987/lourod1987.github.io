@@ -78,9 +78,14 @@ function spellCheck() {
         console.log("WPM: " + wordsPerMinCalc);
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
-        accuracy = Math.round(changeOriginText.innerHTML.length / typingError);
+        accuracy = Math.round((changeOriginText.innerHTML.length - typingError) / changeOriginText.innerHTML.length);
+        if (accuracy === 0.1 || accuracy === -0.1) {
+            accuracy = accuracy * 1000;
+        } else {
+            accuracy = accuracy * 100;
+        }
         console.log("This is the accuracy: " + accuracy + "%");
-        accuracyDisplay.innerHTML = accuracy;
+        accuracyDisplay.innerHTML = accuracy + "%";
     } else {
         if (textEntered == originTextMatch) {
             testWrapper.style.borderColor = "#65CCf3";
