@@ -18,7 +18,7 @@ var timerRunning = false;
 var wordsPerMinCalc;
 var typingError = 0;
 var accuracy;
-wordCountDisplay = changeOriginText.innerHTML.length;
+
 
 console.log("This is originText var: " + originText);
 console.log("This is changeOriginText var: " + changeOriginText);
@@ -81,6 +81,7 @@ function spellCheck() {
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
         accuracy = (changeOriginText.innerHTML.length - typingError) / changeOriginText.innerHTML.length;
+        console.log("Initial accuracy math output: " + accuracy);
         if (accuracy === 0.1 || accuracy === -0.1) {
             accuracy = accuracy * 1000;
         } else {
@@ -104,6 +105,7 @@ function spellCheck() {
 // Start the timer:
 function start() {
     let textEnteredLength = testArea.value.length;
+    wordCountDisplay = changeOriginText.innerHTML.length;
     
     if (textEnteredLength === 0 && !timerRunning) {
         timerRunning = true;
