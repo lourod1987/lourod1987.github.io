@@ -26,31 +26,36 @@ console.log("This is originText var: " + originText);
 console.log("This is changeOriginText var: " + changeOriginText);
 console.log("This is the current array selection: " + manyText[arrCount]);
 
-window.onload = function() {
-    switchText();
-    reset();
-    getWordCount();
-    console.log(getWordCount());
-    console.log(wordCount);
-};
+switchText();
+reset();
+getWordCount();
+console.log(getWordCount());
+console.log(wordCount);
+
 
 //Function for changing text for speed typing test
 function switchText() {
-    changeOriginText.innerHTML= manyText[arrCount];
-    console.log("arrCount before increment: " + arrCount)
-    arrCount++;
-    console.log("arrCount after increment: " + arrCount)
-    console.log("This is the current array selection: " + manyText[arrCount]);
-    console.log("This is the current word count for the selected array: " + manyText[arrCount][0].length);
+    console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
+    if (timer[2] >= 1) {
+        console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
+        alert("cannot change text during test");
+    } else {
+        console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
+        changeOriginText.innerHTML= manyText[arrCount];
+        console.log("arrCount before increment: " + arrCount)
+        arrCount++;
+        console.log("arrCount after increment: " + arrCount)
+        console.log("This is the current array selection: " + manyText[arrCount]);
+        console.log("This is the current word count for the selected array: " + manyText[arrCount][0].length);
     
+        if (arrCount >= manyText.length) {
+            arrCount = 0;
+            console.log("Inside if statement meant to set array back to 0");
+        }
     
-    
-    if (arrCount >= manyText.length) {
-        arrCount = 0;
+        reset();
+        getWordCount();
     }
-    
-    reset();
-    getWordCount();
 }
 
 //Function is used to accurately get a word count for each piece of text
@@ -58,6 +63,7 @@ function getWordCount() {
     var arr = [];
     console.log("initial index: " + index);
     for (i = 0; i <= manyText.length; i++) {
+        console.log(manyText[i]);
         for (x = 0; x <= manyText[index].length; x++) {
             arr.push();
             index++;
@@ -176,14 +182,8 @@ function reset() {
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 resetButton.addEventListener("click", reset, false);
-console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
-if (timer[2] >= 1) {
-    console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
-    alert("cannot change text during test");
-} else {
-    console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
-    changeOriginText.addEventListener("click", switchText, false);
-}
+changeOriginText.addEventListener("click", switchText, false);
+
 
 
 //Functionality to add:
