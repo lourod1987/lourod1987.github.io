@@ -81,6 +81,7 @@ function spellCheck() {
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
         accuracy = (changeOriginText.innerHTML.length - typingError) / changeOriginText.innerHTML.length;
+        console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
         if (accuracy === 0.1 || accuracy === -0.1) {
             accuracy = accuracy * 1000;
@@ -106,6 +107,7 @@ function spellCheck() {
 function start() {
     let textEnteredLength = testArea.value.length;
     wordCountDisplay = changeOriginText.innerHTML.length;
+    console.log("word count disp: " + wordCountDisplay);
     
     if (textEnteredLength === 0 && !timerRunning) {
         timerRunning = true;
