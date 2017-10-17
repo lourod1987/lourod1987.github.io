@@ -8,6 +8,7 @@ var wpmDisplay = document.querySelector("#wpm");
 var typingErrorDisplay = document.querySelector("#errors");
 var accuracyDisplay = document.querySelector("#accuracy");
 var changeOriginText = document.querySelector("#alter");
+var wordCountDisplay = document.querySelector("#wordcount");
 
 var manyText = ["This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!", "Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.", "Hello world. It is a nice day.", "The 1910 Cuba hurricane was said to be one of the worst tropical cyclones that has ever hit Cuba. The storm formed in the southern caribbean sea on October 9, 1910.", "It grew stronger as it moved northwest. It then made landfall on the western end of Cuba. The storm made a loop over open water, and then began moving towards the United States."];
 var arrCount = 0;
@@ -17,6 +18,7 @@ var timerRunning = false;
 var wordsPerMinCalc;
 var typingError = 0;
 var accuracy;
+wordCountDisplay = changeOriginText.innerHTML.length;
 
 console.log("This is originText var: " + originText);
 console.log("This is changeOriginText var: " + changeOriginText);
@@ -78,7 +80,7 @@ function spellCheck() {
         console.log("WPM: " + wordsPerMinCalc);
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
-        accuracy = Math.round((changeOriginText.innerHTML.length - typingError) / changeOriginText.innerHTML.length);
+        accuracy = (changeOriginText.innerHTML.length - typingError) / changeOriginText.innerHTML.length;
         if (accuracy === 0.1 || accuracy === -0.1) {
             accuracy = accuracy * 1000;
         } else {
