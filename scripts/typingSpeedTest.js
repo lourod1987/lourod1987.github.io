@@ -49,10 +49,12 @@ function switchText() {
     reset();
 }
 
+//Function is used to accurately get a word count for each piece of text
 function getWordCount() {
     for (i = 0; i <= manyText[arrCount].length; i++) {
         for (x = 0; x <= manyText[arrCount][i].length; x++){
             wordCount++;  
+        }
     }
 }
 
