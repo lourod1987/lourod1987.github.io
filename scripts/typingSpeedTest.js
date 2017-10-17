@@ -24,11 +24,15 @@ console.log("This is originText var: " + originText);
 console.log("This is changeOriginText var: " + changeOriginText);
 console.log("This is the current array selection: " + manyText[arrCount]);
 
+window.onload = function() {
+  changeOriginText.innerHTML= manyText[arrCount];
+};
 
 //Function for changing text for speed typing test
 function switchText() {
-    changeOriginText.innerHTML= manyText[arrCount];
+    console.log("arrCount before increment: " + arrCount)
     arrCount++;
+    console.log("arrCount after increment: " + arrCount)
     console.log("This is the current array selection: " + manyText[arrCount]);
     console.log("This is the current word count for the selected array: " + manyText[arrCount].length);
     
@@ -86,7 +90,7 @@ function spellCheck() {
         accuracy = ((changeOriginText.innerHTML.length / 5) - typingError) / changeOriginText.innerHTML.length;
         console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
-        if (accuracy === 0.1 || accuracy === -0.1) {
+        if (accuracy === 0.1 || accuracy <== -0.1) {
             accuracy = Math.round(accuracy * 1000);
         } else {
             accuracy = Math.round(accuracy * 100);
@@ -109,7 +113,9 @@ function spellCheck() {
 // Start the timer:
 function start() {
     let textEnteredLength = testArea.value.length;
-    wordCountDisplay.innerHTML = changeOriginText.innerHTML.length;
+    
+    //temp fix for word count... need more accurate measure of word count
+    wordCountDisplay.innerHTML = changeOriginText.innerHTML.length / 5;
     console.log("word count disp: " + wordCountDisplay);
     
     if (textEnteredLength === 0 && !timerRunning) {
