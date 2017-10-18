@@ -57,6 +57,24 @@ function switchText() {
         console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
         console.log("This is changeOriginText.innerHTML var before assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         changeOriginText.innerHTML= manyText[arrCount];
+        
+        
+        var containerArray = manyText[arrCount];
+        console.log("inside container array: " + containerArray)
+        if (changeOriginText.innerHTML === manyText[arrCount]) {
+            for (i = 0; i < containerArray.length; i++) {
+                console.log("Inside for loop in getWordCount func:" + containerArray);
+                var separate = containerArray.split(" ");
+                console.log('result of separate action: ' + separate);
+                console.log('separate array length (should be word count): ' + separate.length);
+                break;
+            }
+        }
+        wordCount = separate.length;
+        console.log("Total word count at end of getWordCount func: " + wordCount);
+//        return wordCount;
+        
+        
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         console.log("arrCount before increment: " + arrCount)
         arrCount++;
@@ -71,36 +89,35 @@ function switchText() {
         }
     
         reset();
-        getWordCount(manyText, arrCount);
     }
 }
 
 //Function is used to accurately get a word count for each piece of text
-function getWordCount(text, arrayCount) {
-//    var arr = [];
-    var containerArray = manyText[arrCount];
-    console.log("inside container array: " + containerArray)
-    if (changeOriginText.innerHTML === manyText[arrCount]) {
-        for (i = 0; i < containerArray.length; i++) {
-            console.log("Inside for loop in getWordCount func:" + containerArray);
-            var separate = containerArray.split(" ");
-            console.log('result of separate action: ' + separate);
-            console.log('separate array length (should be word count): ' + separate.length);
-            break;
-    //        arr.push(separate);
-    //        console.log('what new array arr looks like after pushing separate: ' + arr);
-    //        for (x = 0; x <= manyText[index].length; x++) {
-    //            arr.push();
-    //            index++;
-    //            console.log("current index: " + index);
-    //            console.log("Array for holding each word from a single text: " + arr)
-    //        }
-        }
-    }
-    wordCount = separate.length;
-    console.log("Total word count at end of getWordCount func: " + wordCount);
-    return wordCount;
-}
+//function getWordCount(text, arrayCount) {
+////    var arr = [];
+//    var containerArray = manyText[arrCount];
+//    console.log("inside container array: " + containerArray)
+//    if (changeOriginText.innerHTML === manyText[arrCount]) {
+//        for (i = 0; i < containerArray.length; i++) {
+//            console.log("Inside for loop in getWordCount func:" + containerArray);
+//            var separate = containerArray.split(" ");
+//            console.log('result of separate action: ' + separate);
+//            console.log('separate array length (should be word count): ' + separate.length);
+//            break;
+//    //        arr.push(separate);
+//    //        console.log('what new array arr looks like after pushing separate: ' + arr);
+//    //        for (x = 0; x <= manyText[index].length; x++) {
+//    //            arr.push();
+//    //            index++;
+//    //            console.log("current index: " + index);
+//    //            console.log("Array for holding each word from a single text: " + arr)
+//    //        }
+//        }
+//    }
+//    wordCount = separate.length;
+//    console.log("Total word count at end of getWordCount func: " + wordCount);
+//    return wordCount;
+//}
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
 function leadingZero(time) {
