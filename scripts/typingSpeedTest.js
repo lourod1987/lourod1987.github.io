@@ -28,8 +28,8 @@ console.log("This is the current array selection: " + manyText[arrCount]);
 
 switchText();
 reset();
-getWordCount(manyText);
-console.log(getWordCount(manyText));
+getWordCount(manyText, arrCount);
+console.log(getWordCount(manyText, arrCount));
 console.log(wordCount);
 
 
@@ -57,16 +57,19 @@ function switchText() {
         }
     
         reset();
-        getWordCount(manyText);
+        getWordCount(manyText, arrCount);
     }
 }
 
 //Function is used to accurately get a word count for each piece of text
-function getWordCount(text) {
-    var arr = [];
-    for (i = 0; i <= manyText.length; i++) {
-        console.log("Inside for loop in getWordCount func:" + manyText[i]);
-        var separate = manyText[i].split(" ");
+function getWordCount(text, arrayCount) {
+//    var arr = [];
+    var containerArray = manyText[arrCount];
+    console.log("inside container array: " + containerArray)
+    
+    for (i = 0; i < containerArray.length; i++) {
+        console.log("Inside for loop in getWordCount func:" + containerArray);
+        var separate = containerArray.split(" ");
         console.log('result of separate action: ' + separate);
         console.log('separate array length (should be word count): ' + separate.length);
 //        arr.push(separate);
@@ -154,7 +157,8 @@ function start() {
     let textEnteredLength = testArea.value.length;
     
     //temp fix for word count... need more accurate measure of word count
-    wordCountDisplay.innerHTML = Math.floor(changeOriginText.innerHTML.length / 5);
+//    wordCountDisplay.innerHTML = Math.floor(changeOriginText.innerHTML.length / 5);
+    wordCountDisplay.innerHTML = wordCount;
     console.log("word count disp: " + wordCountDisplay);
     
     if (textEnteredLength === 0 && !timerRunning) {
