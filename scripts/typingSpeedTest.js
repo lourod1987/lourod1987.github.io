@@ -190,5 +190,6 @@ changeOriginText.addEventListener("click", switchText, false);
 //Still need to add in functionality for message of being unable to change text during test (condition is once timer is greater than 0). Want to remove horrid alert message
 //get word count to show up immediately for each text
 //get text to start with array
+//don't increment error count when user is merely deleting characters
 //Would like to still work on modifying the css and adding in my own style/desgin
 //Add a high score board (most likely requires a way to permanently store the data unless it is only for a single session for a single user)
