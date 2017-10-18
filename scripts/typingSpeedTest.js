@@ -158,7 +158,7 @@ function spellCheck() {
 function start() {
     let textEnteredLength = testArea.value.length;
     
-    if (changeOriginText.innerHTML === manyText[arrCount]) {
+    if (changeOriginText.innerHTML === manyText[arrCount].innerHTML) {
         wordCountDisplay.innerHTML = wordCount;
         console.log("word count disp: " + wordCountDisplay);
     
