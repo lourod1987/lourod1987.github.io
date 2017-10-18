@@ -38,7 +38,6 @@ function switchText() {
         changeOriginText.innerHTML= manyText[arrCount];
     
         getWordCount(manyText, arrCount);
-        wordCountDisplay.innerHTML = wordCount;
         
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         console.log("arrCount before increment: " + arrCount)
@@ -140,7 +139,7 @@ function spellCheck() {
 function start() {
     let textEnteredLength = testArea.value.length;
     
-//    wordCountDisplay.innerHTML = wordCount;
+    wordCountDisplay.innerHTML = wordCount;
     console.log("word count disp: " + wordCountDisplay);
 
     if (textEnteredLength === 0 && !timerRunning) {
