@@ -19,19 +19,20 @@ var wordsPerMinCalc;
 var typingError = 0;
 var accuracy;
 var wordCount = 0;
+var pageLoad = 0;
 
 window.onload = function() {
   initialLoad();  //example function call.
 }
 
 
-function initialLoad() {
-    var pageLoad = 0;
+function initialLoad(loadCount) {
     
     if (pageLoad === 0) {
 //        changeOriginText.innerHTML= manyText[arrCount];
         pageLoad++;
     }
+    return pageLoad;
 }
 
 //console.log("This is originText var: " + originText);
@@ -69,12 +70,12 @@ function switchText() {
         }
     
         reset();
-        getWordCount(manyText, arrCount);
+        getWordCount(manyText, arrCount, pageLoad);
     }
 }
 
 //Function is used to accurately get a word count for each piece of text
-function getWordCount(text, arrayCount) {
+function getWordCount(text, arrayCount, loadCount) {
 //    var arr = [];
     var containerArray = manyText[arrCount];
     console.log("inside container array: " + containerArray)
