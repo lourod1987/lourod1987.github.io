@@ -169,24 +169,28 @@ footer h2 {
 }
 
 footer a {
+/*
     color: #fcf7f7;
     background: #1d0049;
+*/
     padding: 10px;
-    border-radius: 10px;
+/*    border-radius: 10px;*/
     margin-left: 5px;
     margin-right: 5px;
     padding: 1.1em;
 }
 
 footer a:hover {
+/*
     color: #1d0049;
     background: #fcf7f7;
     font-weight: bold;
     border: 3px solid #1d0049;
     border-radius: 5px;
+*/
     margin-left: 5px;
     margin-right: 5px;
-    padding: 1.2em;
+/*    padding: 1.2em;*/
 }
 
 footer p {
