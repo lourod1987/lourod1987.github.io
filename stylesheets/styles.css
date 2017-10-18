@@ -49,7 +49,7 @@ a {
     padding: 10px;
 }
 
-a:hover {
+nav a:hover {
    color: #000009;
    background: #fcf7f7;
    border: 1px solid #000009;
@@ -69,9 +69,11 @@ a:active {
 
 }
 
+/*
 a:focus {
     outline: ;
 }
+*/
 
 
 main p, main li {
