@@ -47,7 +47,7 @@ function initialLoad(loadCount) {
 
 
 //Function for changing text for speed typing test
-function switchText() {
+function switchText(loadCount) {
     console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
     if (timer[2] >= 1) {
         console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
@@ -210,7 +210,7 @@ function reset() {
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 resetButton.addEventListener("click", reset, false);
-changeOriginText.addEventListener("click", switchText, false);
+changeOriginText.addEventListener("click", switchText(pageLoad), false);
 
 
 
