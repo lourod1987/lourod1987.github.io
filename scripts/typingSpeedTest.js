@@ -20,17 +20,28 @@ var typingError = 0;
 var accuracy;
 var wordCount = 0;
 
+window.onload = function() {
+  initialLoad();  //example function call.
+}
 
 
-console.log("This is originText var: " + originText);
-console.log("This is changeOriginText var: " + changeOriginText);
-console.log("This is the current array selection: " + manyText[arrCount]);
+function initialLoad() {
+    var pageLoad = 0;
+    
+    if (pageLoad === 0) {
+        changeOriginText.innerHTML= manyText[arrCount];
+        pageLoad++;
+    }
+}
+//console.log("This is originText var: " + originText);
+//console.log("This is changeOriginText var: " + changeOriginText);
+//console.log("This is the current array selection: " + manyText[arrCount]);
 
 //switchText();
 //reset();
-getWordCount(manyText, arrCount);
-console.log(getWordCount(manyText, arrCount));
-console.log(wordCount);
+//getWordCount(manyText, arrCount);
+//console.log(getWordCount(manyText, arrCount));
+//console.log(wordCount);
 
 
 //Function for changing text for speed typing test
@@ -119,18 +130,18 @@ function spellCheck() {
         if (timer[0] >= 1) {
             var completeTime = timer[0] + (timer[1] / 60);
             console.log("This displays complete time by adding seconds to minutes: " + completeTime);
-            wordsPerMinCalc = Math.round((textEntered.length / 5) / completeTime);
+            wordsPerMinCalc = Math.round(wordCount / completeTime);
         } else {
             var accurateMeasure = timer[1] / 60;
             console.log("Divide seconds to get a fraction value for assesing WPM: " + accurateMeasure);
-            wordsPerMinCalc = Math.round((textEntered.length / 5) / accurateMeasure);
+            wordsPerMinCalc = Math.round(wordCount / accurateMeasure);
         }
         
         console.log("WPM: " + wordsPerMinCalc);
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
         //temp fix for accuracy math.. need accurate word count for text; will be an involved process
-        accuracy = Math.round(((changeOriginText.innerHTML.length / 5) - typingError) / (changeOriginText.innerHTML.length / 5) * 100);
+        accuracy = Math.round(((wordCount - typingError) / wordCount) * 100);
         console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
 //        if (accuracy === 1 || accuracy === -1) {
