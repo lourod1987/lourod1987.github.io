@@ -26,8 +26,8 @@ console.log("This is originText var: " + originText);
 console.log("This is changeOriginText var: " + changeOriginText);
 console.log("This is the current array selection: " + manyText[arrCount]);
 
-switchText();
-reset();
+//switchText();
+//reset();
 getWordCount(manyText, arrCount);
 console.log(getWordCount(manyText, arrCount));
 console.log(wordCount);
@@ -72,6 +72,7 @@ function getWordCount(text, arrayCount) {
         var separate = containerArray.split(" ");
         console.log('result of separate action: ' + separate);
         console.log('separate array length (should be word count): ' + separate.length);
+        break;
 //        arr.push(separate);
 //        console.log('what new array arr looks like after pushing separate: ' + arr);
 //        for (x = 0; x <= manyText[index].length; x++) {
