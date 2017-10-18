@@ -10,7 +10,7 @@ var accuracyDisplay = document.querySelector("#accuracy");
 var changeOriginText = document.querySelector("#alter");
 var wordCountDisplay = document.querySelector("#wordcount");
 
-var manyText = ["Click anywhere on this box to change the text you are taking your speed typing test with! The text in this box is your typing test text. All tests are great for practice. Including this informational text. Practice, practice, practice! All of the following text's including this one are available for the speed typing test and can be looped through until you reach the desired text you wish to take the speed typing test against.", "This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!", "Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.", "Hello world. It is a nice day.", "The 1910 Cuba hurricane was said to be one of the worst tropical cyclones that has ever hit Cuba. The storm formed in the southern caribbean sea on October 9, 1910.", "It grew stronger as it moved northwest. It then made landfall on the western end of Cuba. The storm made a loop over open water, and then began moving towards the United States.", "I love writing stories! Especially when I get to write about difficult situations for the protagonist. Since then I can make him YELL in frustration or HOWL in pain. Every story needs conflict and resolution. How you much conflict and how often can determine the tone and pacing of your story. Pay careful attention to the way you construct your stories otherwise even a strong plot can feel empty if the pacing is poor. Character growth can be important but your characters should have obvious shortcomings, otherwise you risk creating a character who doesn't feel very real."];
+var manyText = ["Click anywhere on this box to change the text you are taking your speed typing test with! The text in this box is your typing test text. All tests are great for practice. Including this informational text. Practice, practice, practice! All of the following text's including this one are available for the speed typing test and can be looped through until you reach the desired text you wish to take the speed typing test against.", "This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Do your best now. Good Luck!", "Do not lose time on daily trivialities. Do not dwell on petty detail, for all these things melt away and drift apart within the obscure traffic of time. Live well and live broadly. You are alive and living now. Now is the envy of all of the dead.", "Hello world. It is a nice day.", "The 1910 Cuba hurricane was said to be one of the worst tropical cyclones that has ever hit Cuba. The storm formed in the southern caribbean sea on October 9, 1910.", "It grew stronger as it moved northwest. It then made landfall on the western end of Cuba. The storm made a loop over open water, and then began moving towards the United States.", "I love writing stories! Especially when I get to write about difficult situations for the protagonist. Since then I can make him YELL in frustration or HOWL in pain. Every story needs conflict and resolution. How much conflict and how often can determine the tone and pacing of your story. Pay careful attention to the way you construct your stories otherwise even a strong plot can feel empty if the pacing is poor. Character growth can be important but your characters should have obvious shortcomings, otherwise you risk creating a character who doesn't feel very real. Go, craft unique stories!"];
 var arrCount = 0;
 var timer = [0, 0, 0, 0];
 var interval;
@@ -25,10 +25,6 @@ var wordCount = 0;
 //console.log("This is changeOriginText var: " + changeOriginText);
 //console.log("This is the current array selection: " + manyText[arrCount]);
 
-//getWordCount(manyText, arrCount);
-//console.log(getWordCount(manyText, arrCount));
-//console.log(wordCount);
-
 
 //Function for changing text for speed typing test
 function switchText() {
@@ -40,23 +36,9 @@ function switchText() {
         console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
         console.log("This is changeOriginText.innerHTML var before assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         changeOriginText.innerHTML= manyText[arrCount];
-        
+    
         getWordCount(manyText, arrCount);
-//        var containerArray = manyText[arrCount];
-//        console.log("inside container array: " + containerArray)
-//        if (changeOriginText.innerHTML === manyText[arrCount]) {
-//            for (i = 0; i < containerArray.length; i++) {
-//                console.log("Inside for loop in getWordCount func:" + containerArray);
-//                var separate = containerArray.split(" ");
-//                console.log('result of separate action: ' + separate);
-//                console.log('separate array length (should be word count): ' + separate.length);
-//                break;
-//            }
-//        }
-//        wordCount = separate.length;
-//        console.log("Total word count at end of getWordCount func: " + wordCount);
-//        return wordCount;
-        
+        wordCountDisplay.innerHTML = wordCount;
         
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         console.log("arrCount before increment: " + arrCount)
@@ -158,7 +140,7 @@ function spellCheck() {
 function start() {
     let textEnteredLength = testArea.value.length;
     
-    wordCountDisplay.innerHTML = wordCount;
+//    wordCountDisplay.innerHTML = wordCount;
     console.log("word count disp: " + wordCountDisplay);
 
     if (textEnteredLength === 0 && !timerRunning) {
@@ -200,7 +182,12 @@ changeOriginText.addEventListener("click", switchText, false);
 
 
 //Functionality to add:
-//Add words per minute count (find calculation online), grab time and combine with # of words in test.
-//Count number of errors the user makes (increment a number and display # of errors)
-//Add an array of different test texts so the user can switch between different text to test.
-//Add a high score board
+//Add words per minute count (find calculation online), grab time and combine with # of words in test. - Complete (with completely accurate word count)!
+//Count number of errors the user makes (increment a number and display # of errors) - Complete!
+//Add an array of different test texts so the user can switch between different text to test. - Complete!
+//Added in accuracy calculation (based on total words in text - errors / words in text * 100) which gives accuracy percentage - Complete!
+
+//==========Would like to do Below==================
+//Still need to add in functionality for message of being unable to change text during test (condition is once timer is greater than 0). Want to remove horrid alert message
+//Would like to still work on modifying the css and adding in my own style/desgin
+//Add a high score board (most likely requires a way to permanently store the data unless it is only for a single session for a single user)
