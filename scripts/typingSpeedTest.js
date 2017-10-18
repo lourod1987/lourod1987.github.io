@@ -33,6 +33,7 @@ function initialLoad() {
         pageLoad++;
     }
 }
+
 //console.log("This is originText var: " + originText);
 //console.log("This is changeOriginText var: " + changeOriginText);
 //console.log("This is the current array selection: " + manyText[arrCount]);
@@ -53,7 +54,7 @@ function switchText() {
     } else {
         console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
         console.log("This is changeOriginText.innerHTML var before assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
-        changeOriginText.innerHTML= manyText[arrCount];
+//        changeOriginText.innerHTML= manyText[arrCount];
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         console.log("arrCount before increment: " + arrCount)
         arrCount++;
