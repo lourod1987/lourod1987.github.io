@@ -28,8 +28,8 @@ console.log("This is the current array selection: " + manyText[arrCount]);
 
 switchText();
 reset();
-getWordCount();
-console.log(getWordCount());
+getWordCount(manyText);
+console.log(getWordCount(manyText));
 console.log(wordCount);
 
 
@@ -57,15 +57,19 @@ function switchText() {
         }
     
         reset();
-        getWordCount();
+        getWordCount(manyText);
     }
 }
 
 //Function is used to accurately get a word count for each piece of text
-function getWordCount() {
+function getWordCount(text) {
     var arr = [];
     for (i = 0; i <= manyText.length; i++) {
         console.log("Inside for loop in getWordCount func:" + manyText[i]);
+        var separate = manyText[i].split(" ");
+        console.log('result of separate action: ' + separate);
+        arr.push(separate);
+        console.log('what new array arr looks like after pushing separate: ' + arr);
 //        for (x = 0; x <= manyText[index].length; x++) {
 //            arr.push();
 //            index++;
