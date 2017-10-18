@@ -49,7 +49,7 @@ a {
     padding: 10px;
 }
 
-nav a:hover {
+nav a:hover, li a:hover {
    color: #000009;
    background: #fcf7f7;
    border: 1px solid #000009;
