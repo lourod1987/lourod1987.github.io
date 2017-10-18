@@ -62,7 +62,7 @@ function switchText() {
 function getWordCount() {
     var arr = [];
     for (i = 0; i <= manyText.length; i++) {
-        console.log(manyText[i]);
+        console.log("Inside for loop in getWordCount func:" + manyText[i]);
 //        for (x = 0; x <= manyText[index].length; x++) {
 //            arr.push();
 //            index++;
@@ -117,14 +117,14 @@ function spellCheck() {
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
         //temp fix for accuracy math.. need accurate word count for text; will be an involved process
-        accuracy = ((changeOriginText.innerHTML.length / 5) - typingError) / (changeOriginText.innerHTML.length / 5);
+        accuracy = ((changeOriginText.innerHTML.length / 5) - typingError) / (changeOriginText.innerHTML.length / 5) * 100;
         console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
-        if (accuracy === 0.1 || accuracy === -0.1) {
-            accuracy = Math.round(accuracy * 1000);
-        } else {
-            accuracy = Math.round(accuracy * 100);
-        }
+//        if (accuracy === 1 || accuracy === -1) {
+//            accuracy = Math.round(accuracy * 100);
+//        } else {
+//            accuracy = Math.round(accuracy * 100);
+//        }
         console.log("This is the accuracy: " + accuracy + "%");
         accuracyDisplay.innerHTML = accuracy + "%";
     } else {
@@ -145,7 +145,7 @@ function start() {
     let textEnteredLength = testArea.value.length;
     
     //temp fix for word count... need more accurate measure of word count
-    wordCountDisplay.innerHTML = changeOriginText.innerHTML.length / 5;
+    wordCountDisplay.innerHTML = Math.floor(changeOriginText.innerHTML.length / 5);
     console.log("word count disp: " + wordCountDisplay);
     
     if (textEnteredLength === 0 && !timerRunning) {
@@ -172,6 +172,7 @@ function reset() {
     wpmDisplay.innerHTML = "---";
     typingErrorDisplay.innerHTML = "---";
     accuracyDisplay.innerHTML = "---";
+    wordCountDisplay.innerHTML = "---";
     
     console.log("reset button has been pressed!");
 }
