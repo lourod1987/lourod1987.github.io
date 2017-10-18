@@ -22,7 +22,7 @@ var wordCount = 0;
 var pageLoad = 0;
 
 window.onload = function() {
-  initialLoad();  //example function call.
+  initialLoad(pageLoad);  //example function call.
 }
 
 
