@@ -63,12 +63,12 @@ function getWordCount() {
     var arr = [];
     for (i = 0; i <= manyText.length; i++) {
         console.log(manyText[i]);
-        for (x = 0; x <= manyText[index].length; x++) {
-            arr.push();
-            index++;
-            console.log("current index: " + index);
-            console.log("Array for holding each word from a single text: " + arr)
-        }
+//        for (x = 0; x <= manyText[index].length; x++) {
+//            arr.push();
+//            index++;
+//            console.log("current index: " + index);
+//            console.log("Array for holding each word from a single text: " + arr)
+//        }
     }
     wordCount = arr.length;
     console.log("Total word count at end of getWordCount func: " + wordCount);
