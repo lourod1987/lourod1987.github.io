@@ -19,21 +19,22 @@ var wordsPerMinCalc;
 var typingError = 0;
 var accuracy;
 var wordCount = 0;
-var pageLoad = 0;
 
-window.onload = function() {
-  initialLoad(pageLoad);  //example function call.
-}
-
-
-function initialLoad(loadCount) {
-    
-    if (pageLoad === 0) {
-//        changeOriginText.innerHTML= manyText[arrCount];
-        pageLoad++;
-    }
-    return pageLoad;
-}
+//var pageLoad = 0;
+//
+//window.onload = function() {
+//  initialLoad(pageLoad);  //example function call.
+//}
+//
+//
+//function initialLoad(loadCount) {
+//    
+//    if (pageLoad === 0) {
+////        changeOriginText.innerHTML= manyText[arrCount];
+//        pageLoad++;
+//    }
+//    return pageLoad;
+//}
 
 //console.log("This is originText var: " + originText);
 //console.log("This is changeOriginText var: " + changeOriginText);
@@ -47,7 +48,7 @@ function initialLoad(loadCount) {
 
 
 //Function for changing text for speed typing test
-function switchText(loadCount) {
+function switchText() {
     console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
     if (timer[2] >= 1) {
         console.log("Timer[2]: " + timer[2] + " Timer[3]: " + timer[3]);
@@ -70,16 +71,16 @@ function switchText(loadCount) {
         }
     
         reset();
-        getWordCount(manyText, arrCount, pageLoad);
+        getWordCount(manyText, arrCount);
     }
 }
 
 //Function is used to accurately get a word count for each piece of text
-function getWordCount(text, arrayCount, loadCount) {
+function getWordCount(text, arrayCount) {
 //    var arr = [];
     var containerArray = manyText[arrCount];
     console.log("inside container array: " + containerArray)
-    if (pageload === 1) {
+    if (changeOriginText.innerHTML === manyText[arrCount]) {
         for (i = 0; i < containerArray.length; i++) {
             console.log("Inside for loop in getWordCount func:" + containerArray);
             var separate = containerArray.split(" ");
@@ -210,7 +211,7 @@ function reset() {
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 resetButton.addEventListener("click", reset, false);
-changeOriginText.addEventListener("click", switchText(pageLoad), false);
+changeOriginText.addEventListener("click", switchText, false);
 
 
 
