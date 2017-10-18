@@ -117,7 +117,7 @@ function spellCheck() {
         wpmDisplay.innerHTML = wordsPerMinCalc;
         
         //temp fix for accuracy math.. need accurate word count for text; will be an involved process
-        accuracy = ((changeOriginText.innerHTML.length / 5) - typingError) / (changeOriginText.innerHTML.length / 5) * 100;
+        accuracy = Math.round(((changeOriginText.innerHTML.length / 5) - typingError) / (changeOriginText.innerHTML.length / 5) * 100);
         console.log("Output of changeOriginText.innerHTML.length: " + changeOriginText.innerHTML.length);
         console.log("Initial accuracy math output: " + accuracy);
 //        if (accuracy === 1 || accuracy === -1) {
