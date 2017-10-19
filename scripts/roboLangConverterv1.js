@@ -11,7 +11,7 @@ window.onload=function() {
             var userInputGet = document.getElementById("userInput");
             var userInputSet;
             console.log(userInputGet.value);
-            var userInputSet = userInputGet.value;
+            userInputSet = userInputGet.value;
             //var stringfyUserInput = userInputSet.toString());
             console.log(userInputSet);
             altMenus.innerHTML = "--Program - Main Menu--";
@@ -62,7 +62,7 @@ window.onload=function() {
                         var x = 0;
                         console.log("X count: ", x);
 
-                        for (i = 0; i <= ar.length - 1; i++) {
+                        for (var i = 0; i <= ar.length - 1; i++) {
                             if (ar[x].length >= 5) {
                                 var combine = ar[x].concat(mod1);
                                 console.log("This is the combine variable: ", combine);
@@ -72,7 +72,7 @@ window.onload=function() {
                                 console.log("X count: ", x);
                             } else {
                                 if (ar[x].length < 5) {
-                                    var combine = ar[x].concat(mod2);
+                                    combine = ar[x].concat(mod2);
                                     newArray.push(combine);
                                     console.log("This is what is in the newArray: ", newArray);
                                     x += 1;
@@ -122,9 +122,9 @@ window.onload=function() {
 
         var string = "";
         projectRun(string);
-            // Should be triggered on form submit
+            // Should be triggered on form submit;
             //alert('hi');
-            // You must return false to prevent the default form behavior
+            // You must return false to prevent the default form behavior;
             return false;
-  }
-}    
+  };
+};    
