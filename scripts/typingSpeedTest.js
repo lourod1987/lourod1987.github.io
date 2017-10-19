@@ -1,6 +1,6 @@
 const testWrapper = document.querySelector(".test-wrapper");
 const testArea = document.querySelector("#test-area");
-var originText = document.querySelector("#origin-text p").innerHTML;
+//var originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 
@@ -44,9 +44,9 @@ function switchText() {
         getWordCount(manyText, arrCount);
         
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
-        console.log("arrCount before increment: " + arrCount)
+        console.log("arrCount before increment: " + arrCount);
         arrCount++;
-        console.log("arrCount after increment: " + arrCount)
+        console.log("arrCount after increment: " + arrCount);
         console.log("This is the current array selection: " + manyText[arrCount]);
         console.log("manyText length: " + manyText.length);
     
@@ -63,11 +63,12 @@ function switchText() {
 function getWordCount(text, arrayCount) {
     
     var containerArray = manyText[arrCount];
-    console.log("inside container array: " + containerArray)
+    var separate;
+    console.log("inside container array: " + containerArray);
     if (changeOriginText.innerHTML === containerArray) {
-        for (i = 0; i < containerArray.length; i++) {
+        for (var i = 0; i < containerArray.length; i++) {
             console.log("Inside for loop in getWordCount func:" + containerArray);
-            var separate = containerArray.split(" ");
+            separate = containerArray.split(" ");
             console.log('result of separate action: ' + separate);
             console.log('separate array length (should be word count): ' + separate.length);
             break;
@@ -160,9 +161,9 @@ function reset() {
     interval = null;
     timer = [0, 0, 0, 0];
     timerRunning = false;
-    wordsPerMinCalc;
+    wordsPerMinCalc = 0;
     typingError = 0;
-    accuracy;
+    accuracy = 0;
     
     testArea.value = "";
     theTimer.innerHTML = "00:00:00";
