@@ -27,7 +27,6 @@ var wordCount = 0;
 
 window.onload = function() {
     switchText();
-    getWordCount(manyText, arrCount);
 };
 
 
