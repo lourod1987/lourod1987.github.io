@@ -27,6 +27,8 @@ var wordCount = 0;
 
 window.onload = function() {
     switchText();
+    getWordCount(manyText, arrCount);
+    wordCountDisplay.innerHTML = wordCount;
 };
 
 
@@ -42,6 +44,7 @@ function switchText() {
         changeOriginText.innerHTML= manyText[arrCount];
     
         getWordCount(manyText, arrCount);
+        wordCountDisplay.innerHTML = wordCount;
         
         console.log("This is changeOriginText.innerHTML var after assignment of manyText[arrCount]: " + changeOriginText.innerHTML);
         console.log("arrCount before increment: " + arrCount)
