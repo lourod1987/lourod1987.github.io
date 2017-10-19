@@ -26,7 +26,8 @@ var wordCount = 0;
 //console.log("This is the current array selection: " + manyText[arrCount]);
 
 window.onload = function() {
-  switchText();
+    switchText();
+    getWordCount(manyText, arrCount);
 };
 
 
@@ -189,11 +190,12 @@ changeOriginText.addEventListener("click", switchText, false);
 //Count number of errors the user makes (increment a number and display # of errors) - Complete!
 //Add an array of different test texts so the user can switch between different text to test. - Complete!
 //Added in accuracy calculation (based on total words in text - errors / words in text * 100) which gives accuracy percentage - Complete!
+//get text to start with array - Complete!
 
-//==========Would like to do Below==================
+//========== Would like to do Below ==================
 //Still need to add in functionality for message of being unable to change text during test (condition is once timer is greater than 0). Want to remove horrid alert message
 //get word count to show up immediately for each text
-//get text to start with array
+//arrow buttons for cycling foward and backward through manyText array
 //don't increment error count when user is merely deleting characters
 //Would like to still work on modifying the css and adding in my own style/desgin
 //Add a high score board (most likely requires a way to permanently store the data unless it is only for a single session for a single user)
