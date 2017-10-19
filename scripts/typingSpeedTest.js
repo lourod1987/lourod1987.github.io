@@ -25,6 +25,10 @@ var wordCount = 0;
 //console.log("This is changeOriginText var: " + changeOriginText);
 //console.log("This is the current array selection: " + manyText[arrCount]);
 
+window.onload = function() {
+  switchText();
+};
+
 
 //Function for changing text for speed typing test
 function switchText() {
