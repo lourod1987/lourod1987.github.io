@@ -84,6 +84,10 @@ main h2, main h3 {
     color: #1d0049;
 }
 
+p {
+    width: 300px;
+}
+
 
 /* Header and Footer
 ===============================*/
