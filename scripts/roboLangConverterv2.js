@@ -1,17 +1,16 @@
 /*
     <title>Project 1 - Luis Rodriguez III</title>
     Defining a function to call to run this program. Makes the code resusable and also allows us to call the function to run again after each if/else statement terminates itself */
- var altIO = document.querySelector("#programIO");
+var altIO = document.querySelector("#programIO");
 var userInputGet = document.querySelector("#userInput");
 var combine;
 var userString = "";
-    var altMenus = document.querySelector("#programMenus");
-    var altMessages = document.querySelector("#programMessages");
+var altMenus = document.querySelector("#programMenus");
+var altMessages = document.querySelector("#programMessages");
 
 window.onload=function() {
     var altMenus = document.querySelector("#programMenus");
     var altMessages = document.querySelector("#programMessages");
-   
     
     
     altMenus.innerHTML = "--Program - Main Menu--";
@@ -26,7 +25,9 @@ window.onload=function() {
 function projectRun(string) {
     
 //    console.log("logging current userInput ID field text: " + userInputGet.innerHTML);
-    var userInputSet = userInputGet;
+//    userInputGet.value = "Click Submit";
+//    var userInputSet = userInputGet.value;
+    var userInputSet;
 //    console.log(userInputGet.value);
 //    userInputSet = userInputGet.value;
     //var stringfyUserInput = userInputSet.toString());
@@ -127,7 +128,7 @@ function projectRun(string) {
             projectRun(string);
         }
     } else if (userInputSet === "Exit" || "EXIT" || "exit") {
-        altMenus.innerHTML = "--Program Exit--";
+        altMenus.innerHTML("--Program Exit--");
         altMessages.innerHTML = "Thank you for using ROBOT Language Converter!";
     } else {
         altMessages.innerHTML = "You did not input a valid command.";
