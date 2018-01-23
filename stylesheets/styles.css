@@ -46,26 +46,10 @@ a {
     padding: 10px;
 }
 
-
-
-/*
-a:visited {
-  color: grey;
-}
-*/
-
-
 a:active {
     border: 1px dotted #fcf7f7;
 
 }
-
-/*
-a:focus {
-    outline: ;
-}
-*/
-
 
 main p, main li {
     color: #fcf7f7;
@@ -75,16 +59,24 @@ main h2, main h3 {
     color: #1d0049;
 }
 
-p {
-    width: 450px;
+
+/*
+a:visited {
+  color: grey;
 }
+
+a:focus {
+    outline: ;
+}
+*/
+
+
 
 
 /* Header and Footer
 ===============================*/
 .forBGTemp, footer {
     background: #fcf7f7;
-    min-height: 75px;
 /*    overflow: auto;*/
 }
 
@@ -104,22 +96,6 @@ p {
 /*    width: 40%;*/
 }
 
-/*
-.header h1, .header h2 {
-  display: block;
-  width: 500px;
-  margin:  0 auto;
-  text-align: center;
-}
-*/
-
-/*
-.forBGTemp img {
-    display: inline-block;
-  width: 240px;
-  margin:  0 auto;
-}
-*/
 
 #logo {
   display: inline-block;
@@ -135,7 +111,6 @@ p {
   -webkit-animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(90%, 0%);*/
-  width: 240px;
 }
 
 /*clear fix hack*/
@@ -208,16 +183,6 @@ footer p {
   
 }
 
-/*
-.col-xs-1 {
- list-style-type: none;
- background-color: #000009;
- min-width: 90px;
- cursor: pointer;
- padding: 10px, 5px;
-}
-*/
-
 nav li {
     min-width: 25px;
     display: inline-grid;
@@ -240,6 +205,17 @@ nav a:hover, li a:hover {
     text-decoration: underline;
 }
 
+/*
+.col-xs-1 {
+ list-style-type: none;
+ background-color: #000009;
+ min-width: 90px;
+ cursor: pointer;
+ padding: 10px, 5px;
+}
+*/
+
+
 /* Primary Content
 ===============================*/
 main {
@@ -253,20 +229,15 @@ main {
   min-height: 500px;
 }
 
-.body-text {
+.intro-text {
   color: azure;
-  margin: 10px 0px 40px 0px;
+  font-size: 30px;
+  margin-bottom: 40px;
+  line-height: 45px;
 }
 
-/*
-body {
- 
-}
-*/
 
-/*h1 {
-  font-size: 2.5em;
-}*/
+
 
 /* Skillset Menus
 ===============================*/
@@ -330,6 +301,36 @@ ul {
 #leadin {
   color: azure;
 }
+
+
+/*About Me Styles
+===========================*/
+.aboutMe-text {
+    width: 65%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h2 {
+    
+    font-family: fantasysans-serif;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.aboutMe-text p {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    width: 80%;
+    
+}
+
 
 /*-----Icon Pack3--------*/
 /*
