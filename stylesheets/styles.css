@@ -110,6 +110,7 @@ a:focus {
   -webkit-animation-name: slide-in-2;
   -webkit-animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-in;
+/*   max-width: 275px;*/
 /*transform: translate(90%, 0%);*/
 }
 
