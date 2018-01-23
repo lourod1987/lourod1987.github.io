@@ -82,6 +82,7 @@ a:focus {
 
 .header {
   font-family: 'Sonsie One', cursive, serif;
+  font-size: 16px;
   display: inline-block;
   vertical-align: middle;
 /*  margin:  0 10px;*/
@@ -94,6 +95,10 @@ a:focus {
   -webkit-animation-timing-function: ease-in;
 /*transform: translate(60%, 0%);*/
 /*    width: 40%;*/
+}
+
+.header h2 {
+    font-size: 35px;
 }
 
 
