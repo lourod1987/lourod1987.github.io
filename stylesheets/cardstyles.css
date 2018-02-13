@@ -1,17 +1,19 @@
 /*Global Styles */
 body {
-    color: black;
+    color: #fcf7f7;
 }
 
 #cardWrapper {
     border: solid 1px grey;
-    box-shadow: 10px 5px 5px rgba(0, 0 , 0, .1);
+    box-shadow: 10px 5px 5px rgba(0, 0 , 0, .2);
     padding: 20px;
     width: 342px;
     margin: auto;
-    background: radial-gradient(white, grey);
+    background-color: #0f0f0f;
+/*    background: radial-gradient(#fcf7f7, #000009);*/
 }
 
+/*Specific styles*/
 h3 {
     font-weight: 900;
     font-size: 26px;
