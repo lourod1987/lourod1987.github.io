@@ -317,6 +317,13 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+section {
+/*
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+*/
+}
+
 h2 {
     
     font-family: fantasysans-serif;

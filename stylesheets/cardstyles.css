@@ -1,0 +1,49 @@
+/*Global Styles */
+body {
+    color: black;
+}
+
+#cardWrapper {
+    border: solid 1px grey;
+    box-shadow: 10px 5px 5px rgba(0, 0 , 0, .1);
+    padding: 20px;
+    width: 342px;
+    margin: auto;
+    background: radial-gradient(white, grey);
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 26px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#mainText {
+    border: solid 1px grey;
+    width: 300px;
+    padding: 8px;
+}
+
+#interestingFact {
+    font-style: italic;
+}
+
+span {
+    font-weight: bold;
+}
+
+ul {
+   list-style: none;
+   text-align: left;
+    padding-left: 0px;
+}
+
+#backtohome {
+    margin: 20px;
+}
