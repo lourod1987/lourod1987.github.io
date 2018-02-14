@@ -7,7 +7,7 @@ body {
     border: solid 1px grey;
     box-shadow: 10px 5px 5px rgba(0, 0 , 0, .2);
     padding: 20px;
-    width: 342px;
+    width: 300px;
     margin: auto;
     background-color: #0f0f0f;
 /*    background: radial-gradient(#fcf7f7, #000009);*/
@@ -19,16 +19,19 @@ h3 {
     font-size: 26px;
     margin-top: 0px;
     margin-bottom: 15px;
+    padding-left: 5px;
+/*    border: solid 3px grey;*/
 }
 
 img {
     width: 300px;
     margin-bottom: 10px;
+    border: solid 1px grey;
 }
 
 #mainText {
     border: solid 1px grey;
-    width: 300px;
+    width: 283px;
     padding: 8px;
 }
 
@@ -44,8 +47,4 @@ ul {
    list-style: none;
    text-align: left;
     padding-left: 0px;
-}
-
-#backtohome {
-    margin: 20px;
 }
