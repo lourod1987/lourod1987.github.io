@@ -1,15 +1,17 @@
 /*Global Styles */
 body {
     color: #fcf7f7;
+    font-family: Arial, sans-serif;
 }
 
 #cardWrapper {
-    border: solid 1px grey;
+    border: solid 2px grey;
     box-shadow: 10px 5px 5px rgba(0, 0 , 0, .2);
     padding: 20px;
-    width: 300px;
+    width: 344px;
     margin: auto;
     background-color: #0f0f0f;
+    border-radius: 5px;
 /*    background: radial-gradient(#fcf7f7, #000009);*/
 }
 
@@ -27,12 +29,14 @@ img {
     width: 300px;
     margin-bottom: 10px;
     border: solid 1px grey;
+    border-radius: 5px;
 }
 
 #mainText {
     border: solid 1px grey;
-    width: 283px;
+    width: 300px;
     padding: 8px;
+    border-radius: 5px;
 }
 
 #interestingFact {
@@ -44,7 +48,13 @@ span {
 }
 
 ul {
+   font-size: 14px;
+   line-height: 22px;
    list-style: none;
    text-align: left;
     padding-left: 0px;
+}
+
+#backtohome {
+    margin: 20px;
 }
