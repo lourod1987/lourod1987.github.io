@@ -1,15 +1,18 @@
-#alignAll {
-    text-align: center;
-}
-
-h1 {
-    font-family: Monoton;
-    font-size: 70px;
+/*Global Styles
+=====================*/
+div h1 {
+    font-family: 'Monofett', cursive;
+    color: whitesmoke;
+    font-size: 90px;
     margin: 0.2em;
+    margin-top: 0px;
 }
 
-h2 {
+div h2 {
     margin: 1em 0 0.25em;
+    color: whitesmoke;
+    font-family: 'Mitr', sans-serif;
+    font-weight: bold;
 }
 
 h2:first-of-type {
@@ -39,6 +42,53 @@ input[type=number] {
     width: 6em;
 }
 
+form {
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Mitr', sans-serif;
+}
+
+button {
+    background-color: #2EC9AD;
+    border-radius: 10px;
+    padding: 0.5em;
+    font-family: 'Mitr', sans-serif;
+}
+
+
+/*ID Styles
+=====================*/
+#colorPicker {
+    margin-bottom: 10px;
+}
+
+#inputHeight {
+    color: black;
+}
+
+#inputWidth {
+    color: black;
+}
+
+#alignAll {
+    text-align: center;
+}
+
+.bg {
+    background-color: #DB0000;
+}
+
+#special {
+   color: black; 
+}
+
 #backtohome {
     margin: 20px;
+    color: whitesmoke;
+    background-color: #477DFF;
+}
+
+#reset {
+    background-color: #FF5000;
 }

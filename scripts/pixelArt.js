@@ -1,6 +1,13 @@
+/* functionality to add:
+- A reset button ----- Completed!
+- Alternative selection mode (like a brush that allows you to fill sections just by hovering over)
+- Undo/Redo functionality (would need to save states?)
+*/
+
 //set a bool value to check if the grid has been previously created
 var ranAlready = false;
 //console.log(ranAlready);
+//var isDown = false;
 
 /*call functions on document load, this call click event on submit button calling event as an arg to prevent default functionality*/
 $(document).ready($("#submit").click(function (evt) {
@@ -35,6 +42,14 @@ function reset(ran) {
         ranAlready = false;
     }
 }
+
+$('#reset').on('click', function() {
+    reset(ranAlready);
+});
+
+ $(document).mousedown(function() {
+    isDown = true;      // When mouse goes down, set isDown to true
+  })
 
 //make grid takes in two parameters for height and width of grid
 function makeGrid(rowCount, colCount) {
@@ -71,3 +86,22 @@ $('#pixelCanvas').on('click', 'td', function() {
     //set background color of td cell clicked to currently selected color
     $(this).css('background-color', colorVal) ;
 });
+
+//var brush = $('#pixelCanvas').on('mouseover', 'td', function(isDown) {
+//    
+//    var colorVal = $("#colorPicker").val();
+//      
+//    if (isDown === true) {
+//        $(this).css('background-color', colorVal) ;
+//    }
+//});
+//
+//
+//
+//$('#default').on('click', 'td', function() {
+//    normal();
+//});
+//
+//$('#brush').on('click', 'td', function() {
+//    brush();
+//})
