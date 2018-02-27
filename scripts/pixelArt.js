@@ -112,16 +112,26 @@ $('#pixelCanvas').on('mouseout', 'td', function() {
 
  
 
+$('#pixelCanvas').on('click', 'td', function() {
+//    console.log("click in color is working");
+    //get color selected by user
+    var colorVal = $("#colorPicker").val(); 
+    console.log("this is colorVal on click: " + colorVal);
+	
+    //set background color of td cell clicked to currently selected color
+	$(this).css('background-color', colorVal);
+});
 //calling an event on click of the table based on the cell with a callback
 $('#pixelCanvas').on('mouseover', 'td', function() {
 //    console.log("click in color is working");
     //get color selected by user
     var colorVal = $("#colorPicker").val(); 
     console.log("this is colorVal on click: " + colorVal);
+	
     //set background color of td cell clicked to currently selected color
 	if (isDown === true) {
 		$(this).css('background-color', colorVal);
-	}  
+	}
 });
 
 
