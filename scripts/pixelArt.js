@@ -1,13 +1,24 @@
 /* functionality to add:
 - A reset button ----- Completed!
 - Alternative selection mode (like a brush that allows you to fill sections just by hovering over)
+- Background behind grid and grid with drop shadow
+- Icon eraser button and erase functionality
+- Icon draw buttons and differing draw functionality
+- Provide tool tips for icons
+- Highlight currently selected tile -------- Completed!
+- Style grid controls
+- Verify user wants to reset page or clear table
+- Toggle grid lines visibility
+- Clear only colors from table ----- Complete!
+- Make img draggable and saveable
+- Add in randomized or drop down selection pre-drawn images (maybe just outlines so they can be colored in)
 - Undo/Redo functionality (would need to save states?)
 */
 
 //set a bool value to check if the grid has been previously created
 var ranAlready = false;
 //console.log(ranAlready);
-//var isDown = false;
+var isDown = false;
 
 /*call functions on document load, this call click event on submit button calling event as an arg to prevent default functionality*/
 $(document).ready($("#submit").click(function (evt) {
@@ -15,6 +26,7 @@ $(document).ready($("#submit").click(function (evt) {
     //prevent default functionality of submit button
     evt.preventDefault();
 //    console.log("click worked");
+    
     
     //call reset function and pass in ranAlready arg to reset grid
     reset(ranAlready);
@@ -37,19 +49,31 @@ $(document).ready($("#submit").click(function (evt) {
 /*reset function used to check if makeGrid has been ran and if true clear grid before making a new one set ranAlready to false after*/
 function reset(ran) {
     if (ranAlready === true) {
-        $('tr').remove();
-        $('td').remove();
+        $('tr').remove('*');
+        $('td').remove('*');
         ranAlready = false;
     }
 }
 
-$('#reset').on('click', function() {
+$('#reset').on('click', function(evt) {
+	evt.preventDefault();
+	console.log('reset grid call works!');
     reset(ranAlready);
 });
 
- $(document).mousedown(function() {
-    isDown = true;      // When mouse goes down, set isDown to true
-  })
+$('#clear').on('click', function (evt) {
+	evt.preventDefault();
+//	console.log("clear button call works!");
+    $('td').removeAttr("style");
+}); 
+
+ $('#pixelCanvas').mousedown(function() {
+        isDown = true;      // When mouse goes down, set isDown to true
+    });
+
+ $('#pixelCanvas').mouseup(function() {
+        isDown = false;      // When mouse goes down, set isDown to true
+    });
 
 //make grid takes in two parameters for height and width of grid
 function makeGrid(rowCount, colCount) {
@@ -76,32 +100,38 @@ function makeGrid(rowCount, colCount) {
     }
 }
 
-//calling an event on click of the table based on the cell with a callback
-$('#pixelCanvas').on('click', 'td', function() {
-//    console.log("click in color is working");
-    //get color selected by user
-    var colorVal = $("#colorPicker").val();
-      
-    console.log("this is colorVal on click: " + colorVal);
-    //set background color of td cell clicked to currently selected color
-    $(this).css('background-color', colorVal) ;
+
+//The next two event function are for highlighting the selected cell
+$('#pixelCanvas').on('mouseover', 'td', function() {
+    $(this).on('mouseover').addClass('highlight');
 });
 
-//var brush = $('#pixelCanvas').on('mouseover', 'td', function(isDown) {
-//    
-//    var colorVal = $("#colorPicker").val();
-//      
-//    if (isDown === true) {
-//        $(this).css('background-color', colorVal) ;
-//    }
-//});
-//
-//
-//
+$('#pixelCanvas').on('mouseout', 'td', function() {
+   $(this).on('mouseout').removeClass('highlight');
+});
+
+ 
+
+//calling an event on click of the table based on the cell with a callback
+$('#pixelCanvas').on('mouseover', 'td', function() {
+//    console.log("click in color is working");
+    //get color selected by user
+    var colorVal = $("#colorPicker").val(); 
+    console.log("this is colorVal on click: " + colorVal);
+    //set background color of td cell clicked to currently selected color
+	if (isDown === true) {
+		$(this).css('background-color', colorVal);
+	}  
+});
+
+
 //$('#default').on('click', 'td', function() {
 //    normal();
 //});
 //
 //$('#brush').on('click', 'td', function() {
-//    brush();
-//})
+//    $('#pixelCanvas').on('mousedown mouseover', 'td', function(isDown) {
+//        var colorVal = $("#colorPicker").val();
+//        $(this).css('background-color', colorVal) ;
+//    });
+//});
