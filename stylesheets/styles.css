@@ -59,7 +59,6 @@ main h2, main h3 {
     color: #1d0049;
 }
 
-
 /*
 a:visited {
   color: grey;
@@ -282,11 +281,13 @@ main {
 }
 
 .projects-button {
+  margin-top: 6px;
   padding: 0.75em 1.25em;
   background-color: whitesmoke;
   opacity: 0.9;
   width: 10em;
   color: black;
+  border-radius: 8px;
 }
 
 ul {
