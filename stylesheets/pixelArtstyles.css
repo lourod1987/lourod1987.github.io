@@ -44,10 +44,11 @@ td {
 table {
     border-collapse: collapse;
     margin: 0 auto;
+	margin-bottom: 20px;
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, .25);
-	cursor: cell;
+/*	cursor: cell;*/
 	background-color: white;
-/*	cursor: url(myBall.cur),auto;*/
+	cursor: url(/images/artCursor.png), auto;
 }
 
 tr {
@@ -77,6 +78,7 @@ button {
     padding: 0.5em;
     font-family: 'Mitr', sans-serif;
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 
 .highlight {
@@ -107,7 +109,7 @@ button {
 }
 
 #special {
-   color: whitesmoke;
+   color: #;
    margin-top: 0px;
    margin-bottom: 20px;
 }
@@ -128,8 +130,8 @@ button {
 }
 
 #imgBG {
-	background: url("/images/blueBG.jpg") no-repeat center center fixed;
-	min-height: 35vh; 
+	background: url("/images/portSiteBG.png") no-repeat center center fixed;
+	min-height: 35vh;
 }
 
 #preMade {
