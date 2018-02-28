@@ -239,6 +239,7 @@ $('#pixelCanvas').on('mousedown', function() {
 //callback function that iterates through array of of previously made tables
 $('#preMade').click(function (evt) {
 	evt.preventDefault();
+	$('#brush').trigger('click');
 	
 	if (ranAlready === true) {
 		reset(ranAlready);
