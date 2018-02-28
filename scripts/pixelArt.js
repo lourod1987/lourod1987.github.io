@@ -1,25 +1,30 @@
-/* functionality to add:
+/* Functionality to Add:
+==========================================
 - A reset button ----- Completed!
 - Alternative selection mode (like a brush that allows you to fill sections just by hovering over) ------ Not necessary with current controls!
 - Background behind grid ----- Completed!
 - Grid with drop shadow ----- Completed!
 - Eraser functionality ----- Completed!
-- Icon eraser button
-- Icon draw button
-- Provide tool tips for icons
-- Highlight selected tool
-- Highlight currently selected tile -------- Completed!
-- Style grid controls + or - icons
 - Verify user wants to reset page or clear table
+- Highlight currently selected tile -------- Completed!
 - Toggle grid lines visibility ----- Completed!
 - Clear only colors from table ----- Completed!
-- Make unique art cursor for pixel canvas
-- Make img draggable and saveable
-- Add in randomized or drop down selection pre-drawn images (maybe just outlines so they can be colored in) ------- Completed! 
-- Want to make premade images drop down and create several more
-- Undo/Redo functionality (would need to save states?)
+- Make unique art cursor for pixel canvas ----- Completed!
+- Add in randomized or drop down selection pre-drawn images (maybe just outlines so they can be colored in) ------- Completed!
+- Icon eraser button
+- Icon draw button
+- Highlight selected tool
+- Provide tool tips for icons
+- Style grid controls + or - icons
+- Want to have premade images drop down selection and create several more
 - Add in palette for quick color selections
+- Bucket Fill
+- Change color picking icon
+- Undo/Redo functionality (would need save states?)
 - Increase / Decrease brush size
+- Make img draggable and saveable / Download your creation
+- Able to temporarirly save creation data
+- Touch controls for phones and tablets
 */
 
 //set a bool value to check if the grid has been previously created
@@ -89,6 +94,7 @@ $('#toggle').click(function (evt) {
 		evt.preventDefault();
 		toggle
 		console.log('toggle event callback works!');
+//		$(this).toggle();
 		$('#pixelCanvas').toggleClass('border');
 		$('tr').toggleClass('border');
 		$('td').toggleClass('border');
@@ -199,6 +205,7 @@ $('#eraser').click(function (evt) {
 	});
 });
 
+var z = 0;
 //undo functionality
 $('#undo').click(function (evt) {
 	evt.preventDefault();
@@ -218,11 +225,17 @@ $('#undo').click(function (evt) {
 		$('#pixelCanvas').append(currentStateRow[undoR]);
 		console.log('this is height in undo: ' + rowH);
 		
-		$('tr:nth-child(odd)').append(currentStateData[undoD]);
+		while (z <=  colW) {
+			console.log('in while loop');
+			$('tr:eq(' + z + ')').append(currentStateData[undoD]);
+			z++;
+		}
+		
 //		$('td:nth-child(even)').remove();
 		y++;
+		
 		console.log('this is new StateR: ' + currentStateRow[undoR]);
-		console.log('this is new StateD: ' + currentStateData[undoD]);
+//		console.log('this is new StateD: ' + currentStateData[undoD]);
 	}	
 });
 
@@ -235,6 +248,7 @@ $('#pixelCanvas').on('mousedown', function() {
 	console.log('this is currentStateData: ' + currentStateData);
 	console.log('this is x: ' + x);
 });
+
 
 //callback function that iterates through array of of previously made tables
 $('#preMade').click(function (evt) {
