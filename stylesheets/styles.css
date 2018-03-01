@@ -38,8 +38,7 @@ html {
 }
 
 a {
-    color: #fcf7f7;
-    
+    color: #fcf7f7;  
 }
 
 .projects a {
@@ -56,7 +55,7 @@ main p, main li {
 }
 
 main h2, main h3 {
-    color: #1d0049;
+    color: white;
 }
 
 /*
@@ -72,16 +71,53 @@ a:focus {
 
 
 
-/* Header and Footer
+/* Header/Nav and Footer
 ===============================*/
-.forBGTemp, footer {
-    background: #fcf7f7;
+.nav-bar {
+  min-width: 6%;
+/*  max-width: 80px;*/
+  height: 60px;
+  text-align: center;
+/*  margin: 0px;*/
+  display: inline-block;
+  float: right;
+}
+
+.nav-bar li {
+	max-width: 100px; 
+    display: inline-grid;
+    float: left;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nav-bar a {
+/*	margin: 10px;*/
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Pridi', serif;
+	text-align: center;
+	color: #000009;	
+}
+
+nav a:hover, li a:hover {
+   color: #000009;
+/*   background-color: #fcf7f7;*/
+/*   border: 1px solid #000009;*/
+/*   border-radius: 3px;*/
+   font-weight: 800;
+   text-decoration: underline;
+}
+
+.forBG, footer {
+    background-color: white;
+/*	previous color: #fcf7f7*/
 /*    overflow: auto;*/
 }
 
+
 .header {
-  font-family: 'Sonsie One', cursive, serif;
-  font-size: 16px;
+  font-family: 'Gabriela', serif;
+  font-size: 18px;
   display: inline-block;
   vertical-align: middle;
 /*  margin:  0 10px;*/
@@ -97,22 +133,22 @@ a:focus {
 }
 
 .header h2 {
-    font-size: 35px;
+    font-size: 32px;
+	text-align: left;
 }
 
 
 #logo {
-  display: inline-block;
+  display: inline;
 /*  float: left;*/
-  text-align: center;
 /*  margin: 15px 10px;*/
   margin: 15px auto;
   vertical-align: middle;
   animation-name: slide-in-2;
-  animation-duration: 1.1s;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
   -webkit-animation-name: slide-in-2;
-  -webkit-animation-duration: 1.1s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: ease-in;
 /*   max-width: 275px;*/
 /*transform: translate(90%, 0%);*/
@@ -176,62 +212,20 @@ footer p {
 }
 
 
-/* Navigation Bar
-===============================*/
-.nav-bar {
-  width: 100%;
-  height: 60px;
-  background-color: #000009;
-  color:#fcf7f7;  /* old white #defff2 */
-  text-align: center;
-  margin: 0px;
-  
-}
-
-nav li {
-    min-width: 25px;
-    display: inline-grid;
-    float: left;
-    grid-template-columns: 10% 10% 10% x;
-}
-
-.nav-bar a {
-    padding: 20px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-}
-
-nav a:hover, li a:hover {
-   color: #000009;
-   background: #fcf7f7;
-   border: 1px solid #000009;
-   border-radius: 3px;
-   font-weight: bold;
-    text-decoration: underline;
-}
-
-/*
-.col-xs-1 {
- list-style-type: none;
- background-color: #000009;
- min-width: 90px;
- cursor: pointer;
- padding: 10px, 5px;
-}
-*/
-
 
 /* Primary Content
 ===============================*/
 main {
+  display: block;
   font-family: Helvetica;
   padding: 2em;
-  background-image: -webkit-linear-gradient(#666CCC, #440094);
+/*  background-image: -webkit-linear-gradient(#666CCC, #440094);*/
+	background: url("/images/nasaNeutronStars_1920.jpg") no-repeat center center fixed;
   /*#BC1324*/
-  background-size: contain;
+/*  background-size: contain;*/
   max-width: 100%;
   padding: 2em;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .intro-text {
@@ -255,15 +249,15 @@ main {
 
 /*Colors for Skill Boxes*/
 .skill-html {
-  background-color: #440094; /* previous color E55126 */
+  background-color: #B70003; /* previous color E55126;  awesome red 9A031f*/
 }
 
 .skill-js {
-  background-color: #440094; /* previous color E5A227 */
+  background-color: #B70003; /* previous color E5A227 */
 }
 
 .skill-jquery {
-  background-color: #440094; /* previous color 0C73B8 */
+  background-color: #B70003; /* previous color 0C73B8 */
 }
 
 .skill-html,
@@ -283,7 +277,7 @@ main {
 .projects-button {
   margin-top: 6px;
   padding: 0.75em 1.25em;
-  background-color: whitesmoke;
+  background-color: white;
   opacity: 0.9;
   width: 10em;
   color: black;
@@ -319,30 +313,35 @@ ul {
 }
 
 section {
+	background-color: #B70003;
+	border-radius: 15px;
+	margin: 20px;
+	text-align: center;
+	padding: 20px;
+	box-shadow: -6px 4px 8px #000009;
 /*
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
 */
 }
 
-h2 {
-    
-    font-family: fantasysans-serif;
-    font-size: 36px;
+section h2 {
+    font-family: 'Pridi', serif;
+    font-size: 30px;
     padding-bottom: 20px;
 }
 
 h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
 }
 
 .aboutMe-text p {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 28px;
-    width: 80%;
-    
+    width: 90%;
+    text-align: left;
 }
 
 

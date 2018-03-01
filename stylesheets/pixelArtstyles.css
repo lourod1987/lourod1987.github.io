@@ -82,7 +82,7 @@ button {
 }
 
 button:hover {
-	background-color: indigo;
+	background-color: #FF1500;
 }
 
 .highlight {
