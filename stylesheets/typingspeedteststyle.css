@@ -21,6 +21,11 @@ h6 {
 	clear: both;
 }
 
+h2 {
+	text-decoration: underline;
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -122,7 +127,7 @@ body {
 .intro {
     padding: 2em 2em;
     color: #ffffff;
-    background: #429890;
+    background: #04A777;
 }
 
 
@@ -171,20 +176,37 @@ body {
 .timer {
     font-size: 3em;
     font-weight: bold;
+	margin: 10px;
 }
 
-#reset {
-    padding: .5em 1em;
+#btnFormat #reset {
+    padding: 1.5em 1.5em;
     font-size: 1.2em;
     font-weight: bold;
     color: #E95D0F;
     background: white ;
     border: 10px solid #E95D0F;
+	border-radius: 15px;
 }
 
-#reset:hover {
+#btnFormat #reset:hover {
     color: white;
     background-color: #E95D0F;
+}
+
+div#origin-text {
+	border-radius: 15px;
+	border: 8px solid #0D1B2E;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.additionalData {
+	background-color: #04A777;
+	color: white;
+	padding: 10px;
+	border-radius: 15px;
+	margin: auto;
 }
 
 #backtohome {

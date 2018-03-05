@@ -19,7 +19,9 @@
 - Want to have premade images drop down selection and create several more
 - Add in palette for quick color selections
 - Bucket Fill
-- Change color picking icon
+- Color BG selection
+- Make a color picker (eye drop tool)
+- Change color selector icon and look
 - Undo/Redo functionality (would need save states?)
 - Increase / Decrease brush size
 - Make img draggable and saveable / Download your creation

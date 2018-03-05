@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis A. Rodriguez III Portfolio</title>
     
-   <link href="https://fonts.googleapis.com/css?family=Baumans|Gabriela|Pridi" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Asul|Baumans|Gabriela|Pridi" rel="stylesheet">
     <link href="stylesheets/styles.css" rel="stylesheet">
-    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+<!--    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>-->
     <script type="text/javascript" src="scripts/myJQuery.js"></script>
 </head>
     
 <body>
     <div class="forBG">
+        <header class="header" role="banner">
+        	<a href="index.html" title="Link back to Home page through logo"><img src="images/orangeTinyDragon.png" alt="Luis Rodriguez Fire Breathing Dragon site logo" id="logo"/></a>
        
-        <a href="index.html" title="Link back to Home page through logo"><img src="images/orangeTinyDragon.png" alt="Luis Rodriguez Fire Breathing Dragon site logo" id="logo"/></a>
-       
-           <header class="header" role="banner">
             <h1>Luis A. Rodriguez III</h1>
             <h2>Web Developer</h2>
         </header>
@@ -33,14 +32,14 @@
     </div>
     
     <main class="whole-body" role="main">
-        <p class="intro-text">
+        <h1 class="intro-text">
             <strong>Welcome</strong><br />
 <!--
             Luis Rodriguez <br />
             Web Developer +<br />
             Designer <br />
 -->
-        </p>
+        </h1>
         <div class="Code-Snippets"> </div>
         <div class="Calculator"> </div>
         <div class="Online-Shop"> </div>
@@ -52,21 +51,21 @@
             <div class='skill-html'>
                 <h1>HTML &amp; CSS</h1>
 <!--                <p class='description'>-->
-                <div class='projects-button'>Recent Projects</div>
+<!--                <div class='projects-button'>Recent Projects</div>-->
                     <ul class='projects'>
-                        <li><a href="card.html" title="Link to Black Panther Card">Black&nbsp;Panther&nbsp;Card</a></li>
-                        <li><a href="neil-tribute-page.html" title="Link to Neil deGrasse Tyson Tribute page">Tribute to Neil</a></li>
-                        <li><a href="alien-system.html" title="Link to Alien System Animation page">Alien System</a></li>
+                        <li><a href="card.html" title="Link to Black Panther Card"><img src="/images/blackPantherCard.jpg"/></a>Black&nbsp;Panther&nbsp;Card</li>
+                        <li><a href="neil-tribute-page.html" title="Link to Neil deGrasse Tyson Tribute page"><img src="/images/tysonPreview.jpg"/></a>Tribute to Neil</li>
+                        <li><a href="alien-system.html" title="Link to Alien System Animation page"><img src="/images/alienSystemPreview.jpg"/></a>Alien System</li>
                     </ul>
 <!--                </p>-->
             </div>
             <div class='skill-js'>
                 <h1>JavaScript</h1>
 <!--                <p class='description'>-->
-                <div class='projects-button'>Recent Projects</div>
+<!--                <div class='projects-button'>Recent Projects</div>-->
                     <ul class='projects'>
-                        <li><a href="typing-speed-test.html" title="Link to Typing Speed Test made with JS Example">Typing&nbsp;Speed&nbsp;Test</a></li>
-                        <li><a href="analogClock.html" title="Link to Analog Clock made with JS Example">Analog&nbsp;Clock</a></li>
+                        <li><a href="typing-speed-test.html" title="Link to Typing Speed Test made with JS Example"><img src="/images/typingSpeedTestPreview.jpg"/></a>Typing&nbsp;Speed&nbsp;Test</li>
+                        <li><a href="analogClock.html" title="Link to Analog Clock made with JS Example"><img src="/images/digitalAnalogClockPreview.jpg"/></a>Analog&nbsp;Clock</li>
 <!--
                         <li><a href="robot-language-converter.html" title="Link to Robot Language Converter JS Example">Robot&nbsp;Language&nbsp;Converter</a></li>
                         <li><a href="word-play.html" title="Link to Word Play Page">Word Play</a></li>
@@ -78,11 +77,9 @@
             <div class='skill-jquery'>
                 <h1>jQuery</h1>
 <!--                <p class='description'>-->
-                <div class='projects-button'>Recent Projects</div>
+<!--                <div class='projects-button'>Recent Projects</div>-->
                     <ul class='projects'>
-                        <li><a href="pixelArt.html" title="Link to Art Project made with jQuery ">Pixel&nbsp;Art&nbsp;Project</a></li>
-                        <li>This page has jQuery running on it.</li>
-                        
+                        <li><a href="pixelArt.html" title="Link to Art Project made with jQuery "><img src="/images/pixelArtPreview.jpg"/></a>Pixel&nbsp;Art&nbsp;Project</li>          
 <!--        jQuery project: A simple game
             4 pics of dogs with different colors, every few seconds a pic/color is randomly selected if player clicks selected color they get a point, if  player doesn't click any pic/color no point difference, if player clicks wrong pic they lose a point. A timer that begins counting down when start button is pressed and then game begins -->
                     </ul>
@@ -95,7 +92,7 @@
         <h2>Keep in Contact</h2>
         
         <!-- Social media links. Add or remove any networks. -->
-        <div>
+        <div id="footerImgs">
             <a href="mailto:louart87@gmail.com"><img src="images/logo_gmail_48px.png" alt="Gmail logo image"/></a>
             <a href="https://github.com/lourod1987" target="_blank"><img src="images/GitHub-Mark-48px.png" alt="GitHub logo image"/></a>
             <a href="https://www.linkedin.com/in/lourod1987/" target="_blank"><img src="images/In-2C-48px-R.png" alt="LinkedIn logo image"/></a>
