@@ -1,0 +1,61 @@
+html {
+    box-sizing: border-box;
+	background-color: #9883E5;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+#kitten, #cat {
+	border-radius: 80px;
+	margin: 50px auto;
+	border: 10px solid #7389AE;
+}
+
+
+#kitten:hover, #cat:hover {
+	border: 10px solid #B5BAD0;
+	cursor: pointer;
+}
+
+#backtohome {
+	display: block;
+    margin: 10px;
+    color: whitesmoke;
+    background-color: #477DFF;
+	font-size: 14px;
+	padding: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#backtohome:hover {
+	background-color: #477DCC;
+}
+
+#countContain, #countContain2 {
+	text-align: center;
+	color: white;
+}
+
+.bg {
+	background-color: #81D2C7;
+	padding: 20px;
+	display: inline-grid;
+	grid-template: 90px 1fr / 1fr 1fr 1fr;
+	grid-column-gap: 100px;
+}
+
+#kittenContain {
+	grid-row-start: 2;
+	grid-column-start: 1;
+}
+
+#catContain {
+	grid-row-start: 2;
+	grid-column-start: 2;
+}

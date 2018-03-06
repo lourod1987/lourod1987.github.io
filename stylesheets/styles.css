@@ -78,15 +78,17 @@ a:focus {
   grid-column-start: 3;
   min-width: 6%;
   padding-right: 50px;
+	
 }
 
 .nav-bar li {
 	max-width: 100px;
-    display: inline-grid;
+	display: inline-grid;
 /*    grid-template-columns: 1fr;*/
 }
 
 .nav-bar a {
+	
 	margin-top: 50px;
     padding: 10px;
     text-decoration: none;
@@ -113,7 +115,6 @@ nav a:hover, li a:hover {
 
 .forBG {
 	display: inline-grid;
-	margin: auto;
 	grid-template-columns: 35% 1fr;
 	grid-column-gap: 0;
 	grid-row-gap: 0;
@@ -125,9 +126,9 @@ nav a:hover, li a:hover {
 	grid-column-start: 2;
 }
 
-.header h1{
+.header h1 {
   font-family: 'Gabriela', serif;
-  font-size: 32px;
+  font-size: 2em;
   margin-top: 15px;
 /*
   padding-left: 140px;
@@ -146,7 +147,7 @@ nav a:hover, li a:hover {
 	padding: 0;
 	margin-left: 0;
 	font-family: 'Baumans', cursive;
-    font-size: 30px;
+    font-size: 1.88em;
 	padding-left: 190px;
 /*	animation-name: slide-in;
 
@@ -161,6 +162,7 @@ nav a:hover, li a:hover {
 
 a img#logo {
   float: left;
+  
 /*
   animation-name: slide-in-2;
   animation-duration: 1s;

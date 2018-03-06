@@ -125,12 +125,24 @@ button:hover {
 	font-size: 14px;
 }
 
+#backtohome:hover {
+	background-color: #477DCC;
+}
+
 #reset {
     background-color: #FF5000;
 }
 
+#reset:hover {
+	background-color: #FF1500;
+}
+
 #clear {
 	background-color: #F5BB00;
+}
+
+#clear:hover {
+	background-color: #FF1500;
 }
 
 #imgBG {
