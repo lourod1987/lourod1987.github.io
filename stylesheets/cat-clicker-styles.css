@@ -10,14 +10,16 @@ html {
 }
 
 
-#kitten, #cat {
+
+.catStyles {
+	display: flex;
 	border-radius: 80px;
-	margin: 50px auto;
+	margin: 50px;
 	border: 10px solid #7389AE;
 }
 
 
-#kitten:hover, #cat:hover {
+.catStyles:hover {
 	border: 10px solid #B5BAD0;
 	cursor: pointer;
 }
@@ -37,25 +39,44 @@ html {
 	background-color: #477DCC;
 }
 
-#countContain, #countContain2 {
+#countContain {
 	text-align: center;
 	color: white;
+	margin-bottom: 60px;
 }
 
 .bg {
 	background-color: #81D2C7;
 	padding: 20px;
+/*
 	display: inline-grid;
 	grid-template: 90px 1fr / 1fr 1fr 1fr;
 	grid-column-gap: 100px;
+*/
 }
+/*
 
-#kittenContain {
-	grid-row-start: 2;
+#countContain {
+	grid-row-start: 1;
 	grid-column-start: 1;
 }
+*/
 
-#catContain {
-	grid-row-start: 2;
-	grid-column-start: 2;
+#picBar ul {
+	display: inline-flex;
+	list-style: none;
+}
+
+#picBar ul li img {
+	width: 25%;
+	height: 85%;
+}
+
+img#cat0 {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#countContain img {
+	margin: 15px auto;
 }
