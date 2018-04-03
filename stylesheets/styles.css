@@ -161,6 +161,7 @@ original pixel values:
 	  display: grid;
 	  grid-template-rows: 1fr 1fr 1f;
 	  grid-gap: 20px;
+	  justify-items: center;
 	}
 	
 	.skill-jquery {
@@ -206,6 +207,7 @@ original pixel values:
 	  display: grid;
 	  grid-template: 1fr 300px / 1fr 1fr;
 	  grid-gap: 20px;
+	  justify-items: center;
 	}
 }
 
