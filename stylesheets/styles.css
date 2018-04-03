@@ -71,6 +71,154 @@ a:focus {
 
 
 
+/* Responsive Media Queries
+===============================*/
+
+/*note: using em makes this even more flexible especially for zooming in.
+To get value in em divide pixels by standard font size for one em which is 16.
+original pixel values:
+480px
+481px  768px
+769px  1200px*/
+
+/* another setup
+ /*Mobile first queries 
+
+/* Larger than mobile 
+@media (min-width: 400px) {}
+
+/* Larger than phablet 
+@media (min-width: 550px) {}
+
+/* Larger than tablet 
+@media (min-width: 750px) {}
+
+/* Larger than desktop 
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD 
+@media (min-width: 1200px) {}
+
+*/
+@media only screen and (max-width: 20em) {
+	header img#logo {
+		width: 80px;
+	}
+	
+	.forBG header.header h1 {
+		font-size: 1em;
+	}
+	
+	.forBG header.header h2 {
+    	font-size: 0.9em;
+	}
+	
+	footer #footerImgs img {
+		margin: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 30em) {
+/*	mobile styles go here */
+/*	width: device-width;*/
+/*	zoom: 1;*/
+	
+	div.forBG {
+		display: inline-grid;
+		grid-template-columns: 1fr;
+		padding: 15px;
+		width: 100%;
+	}
+	
+	header.header {
+		grid-column-start: 1;
+	}
+
+	.forBG .header h1 {
+		font-size: 1.5em;
+	}
+	
+	.forBG .header h2 {
+		padding: 0;
+		margin-left: 0;
+    	font-size: 1.4em;
+	}
+	
+	img#logo {
+		width: 90px;
+	}
+	
+	.forBG .nav-bar li {
+		display: block;
+	}
+	
+	.forBG .nav-bar {
+		padding: 0;
+		grid-column-start: 2;
+	}
+	
+	main .skillset {
+	  display: grid;
+	  grid-template-rows: 1fr 1fr 1f;
+	  grid-gap: 20px;
+	}
+	
+	.skill-jquery {
+  		grid-row-start: 1;
+	}
+	
+	.skill-js {
+		grid-row-start: 2;
+	}
+}
+
+@media only screen and (min-width: 30em) and (max-width: 48em) {
+/*	tablet styles go here*/
+	.forBG .header h1 {
+		font-family: serif;
+		font-size: 1.6em;
+	}
+	
+	.forBG .header h2 {
+		padding: 0;
+		margin-left: 0;
+    	font-size: 1.45em;
+	}
+	
+	img#logo {
+		width: 100px;
+	}
+	
+	.forBG .nav-bar li {
+		display: block;
+	}
+	
+	.forBG .nav-bar {
+		padding: 0;
+	}
+	
+	header.header {
+		grid-column-start: 1;
+		grid-column-end: span 2;
+	}
+	
+	main .skillset {
+	  display: grid;
+	  grid-template: 1fr 300px / 1fr 1fr;
+	  grid-gap: 20px;
+	}
+}
+
+
+@media only screen and (min-width: 48em) and (max-width: 75em) {
+/*	desktop styles go here */
+	header.header {
+		grid-column-start: 1;
+		grid-column-end: span 2;
+	}
+	
+}
+
 
 /* Header/Nav and Footer
 ===============================*/
@@ -82,13 +230,10 @@ a:focus {
 }
 
 .nav-bar li {
-	max-width: 100px;
 	display: inline-grid;
-/*    grid-template-columns: 1fr;*/
 }
 
 .nav-bar a {
-	
 	margin-top: 50px;
     padding: 10px;
     text-decoration: none;
@@ -124,6 +269,7 @@ nav a:hover, li a:hover {
 
 .header {
 	grid-column-start: 2;
+	font-size: 16px;
 }
 
 .header h1 {
@@ -236,7 +382,7 @@ main {
 /*  background-image: -webkit-linear-gradient(#666CCC, #440094);*/
 	background: url("/images/nasaNeutronStars_1920.jpg") no-repeat center center fixed;
   /*#BC1324*/
-/*  background-size: contain;*/
+  background-size: cover;
   max-width: 100%;
   padding: 2em;
   min-height: 600px;
@@ -267,7 +413,7 @@ main {
 
 /*Colors for Skill Boxes*/
 .skillset .skill-html {
-  background-color: #B70003;  previous color E55126;  awesome red 9A031f
+  background-color: #B70003;  /*previous color E55126;  awesome red 9A031f*/
   justify-content: flex-start;
 }
 
@@ -332,7 +478,7 @@ main a {
 }
 
 main img {
-	border-radius: 50px;
+	border-radius: 17%;
 }
 
 ul {
@@ -419,10 +565,17 @@ div#portContain {
 	width: 40%;
 }
 
-
-
-/*Grid experiment page
-=========================*/
-#gridContainer {
-	grid-template: 1fr 1fr / 1fr 1fr 1fr;
+/*
+Example for proper (proportional) scaling of video/images
+.container {
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
 }
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+*/
