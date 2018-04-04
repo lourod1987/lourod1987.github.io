@@ -208,7 +208,6 @@ original pixel values:
 	
 	main div.aboutMe-text img {
 		width: 270px;
-		grid-row-start: 1;
 	}
 	
 	section.whoIam {
@@ -265,8 +264,12 @@ original pixel values:
 	
 	main div.aboutMe-text {
 		display: inline-grid;
-		grid-template: 300px 815px 1fr/ 1fr 1fr;
+		grid-template: 280px 815px 1fr/ 1fr 1fr;
 		grid-gap: 20px;
+	}
+	
+	main .aboutMe-text img {
+		width: 280px;
 	}
 	
 	section.education {
@@ -296,7 +299,6 @@ original pixel values:
 	main .aboutMe-text img {
 		grid-row-start: 1;
 		width: 300px;
-		margin: auto;
 	}
 
 	.whoIam {
