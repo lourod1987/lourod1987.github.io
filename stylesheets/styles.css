@@ -605,6 +605,8 @@ ul {
     display: inline-grid;
     grid-template: 400px 1fr / 1fr 1fr 1fr;
 	grid-gap: 20px;
+	align-items: center;
+	justify-items: center;
 }
 
 .aboutMe-text img {
@@ -659,6 +661,33 @@ h3 {
     text-align: left;
 	margin: auto;
 	min-width: 230px;
+}
+
+
+figure {
+	width: auto;	
+}
+
+figcaption {
+	background-color: white;
+	text-align: center;
+	font-size: 16px;
+	width: 220px;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	justify-items: center;
+	margin: 5px auto 0;
+	padding: 0.1em;
+}
+
+figcaption a {
+	color: black;
+	font-weight: bold;
+}
+
+figcaption a:hover {
+	text-decoration: underline;
 }
 
 /*Portfolio Page
