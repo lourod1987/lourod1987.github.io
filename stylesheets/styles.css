@@ -132,6 +132,17 @@ original pixel values:
 		min-width: 250px;
 	}
 	
+	body main div.aboutMe-text {
+		display: grid;
+		grid-template: 250px 920px 1580px 1fr / 1fr;
+		grid-gap: 5px;
+/*		justify-content: space-around;*/
+	}
+	
+	main div.aboutMe-text img#loupic {
+		width: 250px;
+	}
+	
 }
 
 @media only screen and (min-width: 20em) and (max-width: 30em) {
@@ -188,19 +199,30 @@ original pixel values:
 		grid-row-start: 2;
 	}
 	
-	div.aboutMe-text {
+	main div.aboutMe-text {
 		display: grid;
-		grid-template: 800px 1300px 1fr / 1fr;
-		grid-gap: 20px;
+		grid-template: 270px 800px 1320px 1fr / 1fr;
+		grid-gap: 5px;
 /*		justify-content: space-around;*/
 	}
 	
-	section.workexp {
+	main div.aboutMe-text img {
+		width: 270px;
+		grid-row-start: 1;
+	}
+	
+	section.whoIam {
 		grid-row-start: 2;
 	}
 	
-	section.education {
+	section.workexp {
 		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+	
+	section.education {
+		grid-row-start: 4;
+		grid-column-start: 1;
 	}
 }
 
@@ -241,14 +263,19 @@ original pixel values:
 	  justify-items: center;
 	}
 	
-	div.aboutMe-text {
+	main div.aboutMe-text {
 		display: inline-grid;
-		grid-template: 800px 1fr / 1fr 1fr;
+		grid-template: 300px 815px 1fr/ 1fr 1fr;
 		grid-gap: 20px;
 	}
 	
 	section.education {
-		grid-row-start: 2;
+		grid-row-start: 3;
+	}
+	
+	section.workexp {
+		grid-row-start: 1;
+		grid-row-end: span 3;
 	}
 }
 
@@ -260,6 +287,31 @@ original pixel values:
 		grid-column-end: span 2;
 	}
 	
+	main .aboutMe-text {
+		display: inline-grid;
+		grid-template: 300px 1fr / 1fr 1fr 1fr;
+		grid-gap: 10px;
+	}
+	
+	main .aboutMe-text img {
+		grid-row-start: 1;
+		width: 300px;
+		margin: auto;
+	}
+
+	.whoIam {
+		grid-row-start: 2;
+	}
+
+	.workexp {
+		grid-row-start: 1;
+		grid-row-end: span 2;
+	}
+
+	.education {
+		grid-row-start: 1;
+		grid-row-end: span 2;
+	}	
 }
 
 
@@ -549,12 +601,28 @@ ul {
 .aboutMe-text {
     width: 100%;
     display: inline-grid;
-    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template: 400px 1fr / 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
 
 .aboutMe-text img {
+	grid-row-start: 1;
 	width: 400px;
+	margin: auto;
+}
+
+.whoIam {
+	grid-row-start: 2;
+}
+
+.workexp {
+	grid-row-start: 1;
+	grid-row-end: span 2;
+}
+
+.education {
+	grid-row-start: 1;
+	grid-row-end: span 2;
 }
 
 section {
