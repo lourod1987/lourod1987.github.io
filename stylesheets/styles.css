@@ -225,7 +225,7 @@ original pixel values:
 	}
 }
 
-@media only screen and (min-width: 30em) and (max-width: 48em) {
+@media only screen and (min-width: 30em) and (max-width: 52em) {
 /*	tablet styles go here*/
 	.forBG .header h1 {
 		font-family: serif;
@@ -283,7 +283,7 @@ original pixel values:
 }
 
 
-@media only screen and (min-width: 48em) and (max-width: 75em) {
+@media only screen and (min-width: 52em) and (max-width: 75em) {
 /*	desktop styles go here */
 	header.header {
 		grid-column-start: 1;
