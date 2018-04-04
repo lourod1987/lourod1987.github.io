@@ -116,6 +116,22 @@ original pixel values:
 	footer #footerImgs img {
 		margin: 0.8em;
 	}
+	
+	main div.aboutMe-text {
+		display: grid;
+		grid-template: 900px 1570px 1fr / 1fr;
+		grid-gap: 20px;
+/*		justify-content: space-around;*/
+	}
+	
+	div.aboutMe-text p {
+		min-width: 200px;
+	}
+	
+	main section {
+		min-width: 250px;
+	}
+	
 }
 
 @media only screen and (min-width: 20em) and (max-width: 30em) {
@@ -159,7 +175,7 @@ original pixel values:
 	
 	main .skillset {
 	  display: grid;
-	  grid-template-rows: 1fr 1fr 1f;
+	  grid-template-rows: 300px 460px 1fr;
 	  grid-gap: 20px;
 	  justify-items: center;
 	}
@@ -170,6 +186,21 @@ original pixel values:
 	
 	.skill-js {
 		grid-row-start: 2;
+	}
+	
+	div.aboutMe-text {
+		display: grid;
+		grid-template: 800px 1300px 1fr / 1fr;
+		grid-gap: 20px;
+/*		justify-content: space-around;*/
+	}
+	
+	section.workexp {
+		grid-row-start: 2;
+	}
+	
+	section.education {
+		grid-row-start: 3;
 	}
 }
 
@@ -208,6 +239,16 @@ original pixel values:
 	  grid-template: 1fr 300px / 1fr 1fr;
 	  grid-gap: 20px;
 	  justify-items: center;
+	}
+	
+	div.aboutMe-text {
+		display: inline-grid;
+		grid-template: 800px 1fr / 1fr 1fr;
+		grid-gap: 20px;
+	}
+	
+	section.education {
+		grid-row-start: 2;
 	}
 }
 
@@ -508,9 +549,9 @@ ul {
 .aboutMe-text {
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: 1fr / 1fr 1fr 1fr;
+	grid-gap: 20px;
 }
-
 
 section {
 	background-color: #B70003;
@@ -520,6 +561,7 @@ section {
 	padding: 20px;
 	box-shadow: -6px 4px 8px #000009;
 	width: 70%;
+	min-width: 280px;
 }
 
 section h2 {
@@ -542,6 +584,7 @@ h3 {
     width: 90%;
     text-align: left;
 	margin: auto;
+	min-width: 230px;
 }
 
 /*Portfolio Page
