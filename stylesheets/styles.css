@@ -51,12 +51,12 @@ a:active {
 }
 
 main p, main li {
-    color: #fcf7f7;
+	color: black; /*#fcf7f7;*/
 	font-family: 'Asul', sans-serif;
 }
 
 main h2, main h3 {
-    color: white;
+    color: black;
 }
 
 /*
@@ -450,13 +450,16 @@ main {
   display: flex;
   justify-content: space-around;
 /*  flex-wrap: wrap;*/
-	
   text-align: center;
+}
+
+.skillset li {
+	font-weight: bold;
 }
 
 /*Colors for Skill Boxes*/
 .skillset .skill-html {
-  background-color: #B70003;  /*previous color E55126;  awesome red 9A031f*/
+/*  background-color: #B70003;  previous color E55126;  awesome red 9A031f*/
   justify-content: flex-start;
 }
 
@@ -471,7 +474,7 @@ main {
 
 .skill-js {
   justify-content: center;
-  background-color: #B70003; /* previous color E5A227 */
+/*  background-color: #B70003;  previous color E5A227 */
 }
 
 .skill-js li {
@@ -485,7 +488,7 @@ main {
 
 .skill-jquery {
   justify-content: flex-end;
-  background-color: #B70003; /* previous color 0C73B8 */
+/*  background-color: #B70003;  previous color 0C73B8 */
 }
 
 .skill-jquery li img {
@@ -496,13 +499,14 @@ main {
 .skill-html,
 .skill-js,
 .skill-jquery {
+  background-color: white;
   width: 25%;
   padding: 2em 4em 3em 3em;
-  color: white;
+  color: black;
   border-radius: 15px;
   min-width: 240px;
   min-height: 200px;
-  box-shadow: -4px 4px 10px #000009; /*old black #000 */
+  box-shadow: -6px 4px 10px #000009; /*old black #000 */
   margin-bottom: auto;
 }
 
@@ -522,6 +526,7 @@ main a {
 
 main img {
 	border-radius: 17%;
+	box-shadow: -8px 6px 15px #000009;
 }
 
 ul {
@@ -534,13 +539,8 @@ ul {
   line-height: 2em;
 }
 
-.active {
-  background-color: #333333;
-  color: whitesmoke;
-}
-
 #leadin {
-  color: azure;
+  color: white;
 }
 
 
@@ -553,8 +553,12 @@ ul {
 	grid-gap: 20px;
 }
 
+.aboutMe-text img {
+	width: 400px;
+}
+
 section {
-	background-color: #B70003;
+	background-color: white; /*#B70003;*/
 	border-radius: 15px;
 	margin: 20px auto auto auto;
 	text-align: center;
@@ -596,18 +600,23 @@ p.body-text {
 
 img#port {
 	display: block;
-    width: 40%;
+    max-width: 100%;
+	height: auto;
 	margin: auto;
 	border-radius: 0px;
 }
 
 div#portContain {
-	background-color: #B70003;
+	background-color: white;/*#B70003;*/
 	border-radius: 15px;
 	margin: auto;
 	box-shadow: -6px 4px 8px #000009;
 	padding: 20px;
-	width: 40%;
+/*	height: 1740px;*/
+	width: 50%;
+	min-width: 260px;
+	padding: 2em;
+	overflow: hidden;
 }
 
 /*
