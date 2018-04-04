@@ -145,7 +145,7 @@ original pixel values:
 	
 }
 
-@media only screen and (min-width: 20em) and (max-width: 30em) {
+@media only screen and (min-width: 20em) and (max-width: 36em) {
 /*	mobile styles go here */
 /*	width: device-width;*/
 /*	zoom: 1;*/
@@ -225,7 +225,7 @@ original pixel values:
 	}
 }
 
-@media only screen and (min-width: 30em) and (max-width: 52em) {
+@media only screen and (min-width: 36em) and (max-width: 52em) {
 /*	tablet styles go here*/
 	.forBG .header h1 {
 		font-family: serif;
