@@ -39,6 +39,9 @@ const stitch = (left, right) => {
         RESULTS.push(right.shift());
     }
     return RESULTS;
+    
+   /*alternative way to return without while loops return RESULTS.concat(left, right);*/
+    /*ES6 feature that spreads called arrays into new array return [...RESULTS, ...left, ...right]*/
 };
 
 mergeSort(uNums);
