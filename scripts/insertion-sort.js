@@ -8,7 +8,7 @@ const insertionSort = (nums) => {
 			document.write(`<br>Iteration ${x}: ${nums}`);
 			x++;
 			if(nums[i] < nums[j]) {
-				const spliced = nums.splice(i, 1);;
+				const spliced = nums.splice(i, 1);
 				nums.splice(j, 0, spliced[0]);
 			}
 		}

@@ -3,9 +3,15 @@ function findBiggestFraction(a, b) {
     var result;
     
     //ternary operator
-    a > b ? result["firstFraction ", a] : result["secondFraction ", b];
+//    a > b ? result["firstFraction ", a] : result["secondFraction ", b];
     
-    return result
+    if (a > b) {
+        result = ["firstFraction ",  a];
+    } else {
+        result = ["secondFraction ", b];
+    }
+    
+    return result;
 }
 
 var firstFraction = 3/4;
@@ -16,4 +22,4 @@ var fractionResult = findBiggestFraction(firstFraction, secondFraction);
 
 console.log("First fraction result: ", firstFraction);
 console.log("Second fraction result: ", secondFraction);
-console.log("Fraction " + fractionResult[0] + " with a vale of " + fractionResult[1] + "is the biggest!");
+console.log("Fraction " + fractionResult[0] + "with a value of " + fractionResult[1] + " is the biggest!");
