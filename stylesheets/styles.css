@@ -599,7 +599,7 @@ ul {
 	grid-row-end: span 2;
 }
 
-section {
+.aboutMe-text section {
 	background-color: white; /*#B70003;*/
 	border-radius: 15px;
 	margin: 20px auto auto auto;
@@ -610,7 +610,7 @@ section {
 	min-width: 280px;
 }
 
-section h2 {
+.aboutMe-text section h2 {
     font-family: "Pridi", serif;
     font-size: 30px;
     padding-bottom: 20px;
@@ -674,12 +674,11 @@ img#port {
 }
 
 div#portContain {
-	background-color: white;/*#B70003;*/
+	background-color: white;
 	border-radius: 15px;
 	margin: auto;
 	box-shadow: -6px 4px 8px #000009;
 	padding: 20px;
-/*	height: 1740px;*/
 	width: 50%;
 	min-width: 260px;
 	padding: 2em;
