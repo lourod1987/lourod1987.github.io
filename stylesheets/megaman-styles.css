@@ -1,0 +1,65 @@
+/*Global Styles */
+body {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    background: url("/images/mega_man_tt_stage_select_wallpaper.png") no-repeat center center fixed;
+}
+
+.cardWrapper {
+    border: solid 5px black;
+    box-shadow: 10px 5px 5px rgba(0, 0 , 0, .2);
+    padding: 20px;
+    width: 450px;
+    margin: auto;
+    background-color: #0026E5;
+    border-radius: 20px;
+}
+
+/*Specific styles*/
+h3 {
+    font-weight: 900;
+    font-size: 26px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding: 10px 0px 10px 10px;
+    background-color: #009FFD;
+    border: solid 5px white;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: solid 6px white;
+    border-radius: 5px;
+}
+
+.mainText {
+    background-color: #009FFD;
+    font-size: 12px;
+    border: solid 6px white;
+    width: 400px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.interestingFact {
+    font-style: italic;
+}
+
+span {
+    font-weight: bold;
+}
+
+ul {
+   font-size: 12px;
+   line-height: 22px;
+   list-style: none;
+   text-align: left;
+    padding-left: 0px;
+}
+
+.backtohome {
+    margin: 20px;
+    padding: 1em;
+}
