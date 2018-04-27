@@ -576,7 +576,7 @@ ul {
     grid-template: 400px 1fr / 1fr 1fr 1fr;
 	grid-gap: 20px;
 	align-items: center;
-	justify-content: center;
+	justify-items: center;
 }
 
 .aboutMe-text img {
@@ -645,8 +645,6 @@ figcaption {
 	width: 170px;
 	justify-content: center;
 	align-content: center;
-	align-items: center;
-	justify-content: center;
 	margin: 8px auto 0;
 	padding: 0.1em;
 }
