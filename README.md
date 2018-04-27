@@ -1,4 +1,5 @@
-![Dragon Logo](images/orangeTinyDragon_v1.png) # Portfolio Website
+![Dragon Logo](images/orangeTinyDragon_v1.png) 
+# Portfolio Website
 ---
 
 ## Purpose
