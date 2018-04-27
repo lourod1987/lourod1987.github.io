@@ -59,6 +59,17 @@ main h2, main h3 {
     color: black;
 }
 
+/*
+a:visited {
+  color: grey;
+}
+
+a:focus {
+    outline: ;
+}
+*/
+
+
 
 /* Responsive Media Queries
 ===============================*/
@@ -110,6 +121,7 @@ original pixel values:
 		display: grid;
 		grid-template: 900px 1570px 1fr / 1fr;
 		grid-gap: 20px;
+/*		justify-content: space-around;*/
 	}
 	
 	div.aboutMe-text p {
@@ -124,6 +136,7 @@ original pixel values:
 		display: grid;
 		grid-template: 250px 920px 1580px 1fr / 1fr;
 		grid-gap: 5px;
+/*		justify-content: space-around;*/
 	}
 	
 	main div.aboutMe-text img#loupic {
@@ -134,6 +147,9 @@ original pixel values:
 
 @media only screen and (min-width: 20em) and (max-width: 36em) {
 /*	mobile styles go here */
+/*	width: device-width;*/
+/*	zoom: 1;*/
+	
 	div.forBG {
 		display: inline-grid;
 		grid-template-columns: 1fr;
@@ -170,21 +186,17 @@ original pixel values:
 	
 	main .skillset {
 	  display: grid;
-	  grid-template-rows: 360px 300px 460px 1fr;
+	  grid-template-rows: 300px 460px 1fr;
 	  grid-gap: 20px;
 	  justify-items: center;
 	}
-  
-    i {
-      grid-row-start: 1;
-    }
 	
 	.skill-jquery {
-  		grid-row-start: 2;
+  		grid-row-start: 1;
 	}
 	
 	.skill-js {
-		grid-row-start: 3;
+		grid-row-start: 2;
 	}
 	
 	main div.aboutMe-text {
@@ -268,31 +280,6 @@ original pixel values:
 		grid-row-start: 1;
 		grid-row-end: span 3;
 	}
-  
-  main .skillset {
-	  display: grid;
-	  grid-template: 360px 1fr / 1fr 1fr;
-	  grid-gap: 20px;
-	  justify-items: center;
-	}
-  
-    i {
-      grid-row-start: 1;
-    }
-  
-  .skill-html {
-    grid-row-start: 1;
-    grid-column-start: 2;
-  }
-	
-	.skill-jquery {
-  		grid-row-start: 2;
-	}
-	
-	.skill-js {
-		grid-row-start: 2;
-	}
-	
 }
 
 
@@ -354,6 +341,9 @@ original pixel values:
 
 nav a:hover, li a:hover {
    color: #000009;
+/*   background-color: #fcf7f7;*/
+/*   border: 1px solid #000009;*/
+/*   border-radius: 3px;*/
    font-weight: 800;
    text-decoration: underline;
 }
@@ -361,6 +351,8 @@ nav a:hover, li a:hover {
 
 .forBG, footer {
     background-color: white;
+/*	previous color: #fcf7f7*/
+/*    overflow: auto;*/
 }
 
 .forBG {
@@ -381,6 +373,17 @@ nav a:hover, li a:hover {
   font-family: 'Gabriela', serif;
   font-size: 2em;
   margin-top: 15px;
+/*
+  padding-left: 140px;
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+*/
+/*
+  -webkit-animation-name: slide-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+*/
 }
 
 .header h2 {
@@ -389,12 +392,50 @@ nav a:hover, li a:hover {
 	font-family: 'Baumans', cursive;
     font-size: 1.88em;
 	padding-left: 190px;
+/*	animation-name: slide-in;
+
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  -webkit-animation-name: slide-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+*/
 }
 
 
 a img#logo {
   float: left;
+  
+/*
+  animation-name: slide-in-2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  -webkit-animation-name: slide-in-2;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+*/
 }
+
+/*clear fix hack*/
+/*
+.forBGTemp:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+*/
+
+/*
+@keyframes slide-in{
+    from {transform: translate(80%, 0%);}
+    to {transform: translate(0%, 0%);}
+}
+
+@keyframes slide-in-2{
+    from {transform: translate(170%, 0%);}
+    to {transform: translate(0%, 0%);}
+}
+*/
 
 footer h2 {
     color: #000009;
@@ -454,26 +495,7 @@ main {
 /*  align-content: center;*/
 }
 
-i {
-  font-size:4em; 
-  float: left;
-  margin: 20px 10px 40px 10px;
-  align-self: flex-start;
-  order: 0;
-}
 
-.html5 {
-  color:Tomato;
-}
-
-.css {
-  color:blue;
-}
-
-
-.js {
-  color: yellow;
-}
 
 /* Skillset Menus
 ===============================*/
@@ -489,7 +511,9 @@ i {
 	font-weight: bold;
 }
 
+/*Colors for Skill Boxes*/
 .skillset .skill-html {
+/*  background-color: #B70003;  previous color E55126;  awesome red 9A031f*/
   justify-content: flex-start;
 }
 
@@ -504,6 +528,7 @@ i {
 
 .skill-js {
   justify-content: center;
+/*  background-color: #B70003;  previous color E5A227 */
 }
 
 .skill-js li {
@@ -517,6 +542,7 @@ i {
 
 .skill-jquery {
   justify-content: flex-end;
+/*  background-color: #B70003;  previous color 0C73B8 */
 }
 
 .skill-jquery li img {
@@ -534,10 +560,18 @@ i {
   border-radius: 15px;
   min-width: 240px;
   min-height: 200px;
-  box-shadow: -6px 4px 10px #000009;
+  box-shadow: -6px 4px 10px #000009; /*old black #000 */
   margin-bottom: auto;
-  align-self: flex-end;
-  order: 1;
+}
+
+.projects-button {
+  margin-top: 6px;
+  padding: 0.75em 1.25em;
+  background-color: white;
+  opacity: 0.9;
+  width: 10em;
+  color: black;
+  border-radius: 8px;
 }
 
 main a {
