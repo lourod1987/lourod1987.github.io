@@ -52,7 +52,7 @@ a:active {
 
 main p, main li {
 	color: black; /*#fcf7f7;*/
-	font-family: 'Asul', sans-serif;
+	font-family: "Asul", sans-serif;
 }
 
 main h2, main h3 {
@@ -170,18 +170,22 @@ original pixel values:
 	
 	main .skillset {
 	  display: grid;
-	  grid-template-rows: 360px 300px 460px 1fr;
+	  grid-template-rows: 310px 340px 1fr;
 	  grid-gap: 20px;
 	  justify-items: center;
 	}
   
-    i {
-      grid-row-start: 1;
+    ul.skill-shields {
+      justify-content: center;
     }
 	
 	.skill-jquery {
-  		grid-row-start: 2;
+  		grid-row-start: 1;
 	}
+  
+    .skill-html {
+	  grid-row-start: 2;
+    }
 	
 	.skill-js {
 		grid-row-start: 3;
@@ -271,28 +275,25 @@ original pixel values:
   
   main .skillset {
 	  display: grid;
-	  grid-template: 360px 1fr / 1fr 1fr;
+	  grid-template: 1fr 1fr / 1fr 1fr;
 	  grid-gap: 20px;
-	  justify-items: center;
+	  justify-content: center;
 	}
-  
-    i {
-      grid-row-start: 1;
-    }
-  
+
   .skill-html {
     grid-row-start: 1;
-    grid-column-start: 2;
+    grid-column-start: 1;
   }
 	
 	.skill-jquery {
-  		grid-row-start: 2;
+      grid-row-start: 1;
+      grid-column-start: 2
 	}
 	
 	.skill-js {
-		grid-row-start: 2;
+      grid-row-start: 2;
+      grid-column-start: 1;
 	}
-	
 }
 
 
@@ -347,7 +348,7 @@ original pixel values:
 	margin-top: 50px;
     padding: 10px;
     text-decoration: none;
-    font-family: 'Pridi', serif;
+    font-family: "Pridi", serif;
 	text-align: center;
 	color: #000009;	
 }
@@ -378,7 +379,7 @@ nav a:hover, li a:hover {
 }
 
 .header h1 {
-  font-family: 'Gabriela', serif;
+  font-family: "Gabriela", serif;
   font-size: 2em;
   margin-top: 15px;
 }
@@ -386,7 +387,7 @@ nav a:hover, li a:hover {
 .header h2 {
 	padding: 0;
 	margin-left: 0;
-	font-family: 'Baumans', cursive;
+	font-family: "Baumans", cursive;
     font-size: 1.88em;
 	padding-left: 190px;
 }
@@ -398,7 +399,7 @@ a img#logo {
 
 footer h2 {
     color: #000009;
-	font-family:'Pridi', serif;
+	font-family:"Pridi", serif;
   	font-size: 28px;
     font-weight: bold;
     padding: 0.5em;
@@ -433,11 +434,10 @@ footer p {
 ===============================*/
 main {
   display: block;
-  font-family: 'Baumans', cursive;
+  font-family: "Baumans", cursive;
   padding: 2em;
-/*  background-image: -webkit-linear-gradient(#666CCC, #440094);*/
+/* Image courtesy of NASA */
 	background: url("/images/nasaNeutronStars_1920.jpg") no-repeat center center fixed;
-  /*#BC1324*/
   background-size: cover;
   max-width: 100%;
   padding: 2em;
@@ -454,25 +454,29 @@ main {
 /*  align-content: center;*/
 }
 
+.skill-shields {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 i {
   font-size:4em; 
   float: left;
   margin: 20px 10px 40px 10px;
-  align-self: flex-start;
-  order: 0;
 }
 
 .html5 {
-  color:Tomato;
+  color: #FF4D0C;
 }
 
 .css {
-  color:blue;
+  color: #0059A8;
 }
 
 
 .js {
-  color: yellow;
+  color: #EFD528;
 }
 
 /* Skillset Menus
@@ -572,7 +576,7 @@ ul {
     grid-template: 400px 1fr / 1fr 1fr 1fr;
 	grid-gap: 20px;
 	align-items: center;
-	justify-items: center;
+	justify-content: center;
 }
 
 .aboutMe-text img {
@@ -607,7 +611,7 @@ section {
 }
 
 section h2 {
-    font-family: 'Pridi', serif;
+    font-family: "Pridi", serif;
     font-size: 30px;
     padding-bottom: 20px;
 	margin: auto;
@@ -620,7 +624,7 @@ h3 {
 }
 
 .aboutMe-text p {
-    font-family: 'Asul', sans-serif;
+    font-family: "Asul", sans-serif;
     font-size: 16px;
     line-height: 28px;
     width: 90%;
@@ -642,7 +646,7 @@ figcaption {
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-	justify-items: center;
+	justify-content: center;
 	margin: 8px auto 0;
 	padding: 0.1em;
 }
