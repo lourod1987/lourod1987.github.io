@@ -99,13 +99,13 @@ original pixel values:
     margin: 0.8em;
   }
   
-  main div.aboutMe-text {
+  main div.about-me-text {
     display: grid;
     grid-template: 900px 1570px 1fr / 1fr;
     grid-gap: 20px;
   }
   
-  div.aboutMe-text p {
+  div.about-me-text p {
     min-width: 200px;
   }
   
@@ -113,13 +113,13 @@ original pixel values:
     min-width: 250px;
   }
   
-  body main div.aboutMe-text {
+  body main div.about-me-text {
     display: grid;
     grid-template: 250px 920px 1580px 1fr / 1fr;
     grid-gap: 5px;
   }
   
-  main div.aboutMe-text img#loupic {
+  main div.about-me-text img#loupic {
     width: 250px;
   }	
 }
@@ -183,18 +183,18 @@ original pixel values:
     grid-row-start: 3;
   }
   
-  main div.aboutMe-text {
+  main div.about-me-text {
     display: grid;
     grid-template: 270px 800px 1320px 1fr / 1fr;
     grid-gap: 5px;
 /*	justify-content: space-around;*/
 	}
   
-  main div.aboutMe-text img {
+  main div.about-me-text img {
     width: 270px;
   }
   
-  section.whoIam {
+  section.who-i-am {
     grid-row-start: 2;
   }
   
@@ -246,13 +246,13 @@ original pixel values:
     justify-items: center;
   }
   
-  main div.aboutMe-text {
+  main div.about-me-text {
     display: inline-grid;
     grid-template: 280px 815px 1fr/ 1fr 1fr;
     grid-gap: 20px;
   }
   
-  main .aboutMe-text img {
+  main .about-me-text img {
     width: 280px;
   }
   
@@ -296,18 +296,18 @@ original pixel values:
     grid-column-end: span 2;
   }
   
-  main .aboutMe-text {
+  main .about-me-text {
     display: inline-grid;
     grid-template: 300px 1fr / 1fr 1fr 1fr;
     grid-gap: 10px;
   }
   
-  main .aboutMe-text img {
+  main .about-me-text img {
     grid-row-start: 1;
     width: 300px;
   }
   
-  .whoIam {
+  .who-i-am {
     grid-row-start: 2;
   }
   
@@ -555,7 +555,7 @@ ul {
 
 /*About Me Styles
 ===========================*/
-.aboutMe-text {
+.about-me-text {
   width: 100%;
   display: inline-grid;
   grid-template: 400px 1fr / 1fr 1fr 1fr;
@@ -564,13 +564,13 @@ ul {
   justify-items: center;
 }
 
-.aboutMe-text img {
+.about-me-text img {
   grid-row-start: 1;
   width: 400px;
   margin: auto;
 }
 
-.whoIam {
+.who-i-am {
   grid-row-start: 2;
 }
 
@@ -584,7 +584,7 @@ ul {
   grid-row-end: span 2;
 }
 
-.aboutMe-text section {
+.about-me-text section {
   background-color: white;
   border-radius: 15px;
   margin: 20px auto auto auto;
@@ -595,7 +595,7 @@ ul {
   min-width: 280px;
 }
 
-.aboutMe-text section h2 {
+.about-me-text section h2 {
   font-family: "Pridi", serif;
   font-size: 30px;
   padding-bottom: 20px;
@@ -608,7 +608,7 @@ h3 {
   margin: auto;
 }
 
-.aboutMe-text p {
+.about-me-text p {
   font-family: "Asul", sans-serif;
   font-size: 16px;
   line-height: 28px;
@@ -658,7 +658,7 @@ img#port {
   border-radius: 0px;
 }
 
-div#portContain {
+div#port-contain {
   background-color: white;
   border-radius: 15px;
   margin: auto;
