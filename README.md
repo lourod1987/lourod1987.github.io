@@ -9,5 +9,5 @@ Projects in progress can be found in this repository.
 
 #### Note
 ---
-Every project live on the website will have a README as well explaining the project. 
-Why I made the coding decisions I did. As well as intended future improvements.
+Every project live on the website will have a description below (in progress...).
+With information such as what the project is and why I made the coding decisions I did. As well as intended future improvements.

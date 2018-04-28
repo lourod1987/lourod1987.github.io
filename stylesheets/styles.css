@@ -21,7 +21,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -43,12 +45,14 @@ a:active {
   border: 1px dotted #fcf7f7;
 }
 
-main p, main li {
+main p,
+main li {
   color: black; /*#fcf7f7;*/
   font-family: "Asul", sans-serif;
 }
 
-main h2, main h3 {
+main h2,
+main h3 {
   color: black;
 }
 
@@ -344,13 +348,15 @@ original pixel values:
   color: #000009;	
 }
 
-nav a:hover, li a:hover {
+nav a:hover,
+li a:hover {
   color: #000009;
   font-weight: 800;
   text-decoration: underline;
 }
 
-.for-bg, footer {
+.for-bg,
+footer {
   background-color: white;
 }
 
