@@ -156,8 +156,9 @@ button:hover {
 }
 
 
-/*Toggle Switch Note: not implemented in current revision
-=====================*/
+/*Toggle Switch 
+Note: not implemented in current revision
+==========================================*/
 .switch {
   position: relative;
   display: inline-block;
