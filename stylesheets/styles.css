@@ -162,7 +162,7 @@ original pixel values:
   
   main .skillset {
     display: grid;
-    grid-template-rows: 310px 340px 1fr;
+    grid-template-rows: 310px 590px 1fr;
     grid-gap: 20px;
     justify-items: center;
   }
@@ -187,7 +187,6 @@ original pixel values:
     display: grid;
     grid-template: 270px 800px 1320px 1fr / 1fr;
     grid-gap: 5px;
-/*	justify-content: space-around;*/
 	}
   
   main div.about-me-text img {
@@ -267,13 +266,14 @@ original pixel values:
   
   main .skillset {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: 290px 1fr / 1fr 1fr;
     grid-gap: 20px;
     justify-content: center;
   }
   
   .skill-html {
     grid-row-start: 1;
+    grid-row-end: span 2;
     grid-column-start: 1;
   }
   
@@ -284,7 +284,7 @@ original pixel values:
   
   .skill-js {
     grid-row-start: 2;
-    grid-column-start: 1;
+    grid-column-start: 2;
   }
 }
 

@@ -1,3 +1,4 @@
+/*starter files provided courtesy of Lynda.com*/
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
@@ -114,13 +115,13 @@ body {
     padding: 0;
 }
 
-.masthead {
+.title {
     padding: 1em 2em;
     background-color: #0D1B2E;
     color: white;
 }
 
-.masthead h1 {
+.title h1 {
     text-align: center;
 }
 
@@ -142,7 +143,7 @@ body {
     padding: 0 2em;
 }
 
-.test-wrapper {
+.test-container {
     border: 10px solid grey;
     border-radius: 10px;
 }
@@ -158,11 +159,11 @@ body {
     padding-bottom: 1em;
 }
 
-.test-wrapper {
+.test-container {
     display: flex;
 }
 
-.test-wrapper textarea {
+.test-container textarea {
     flex: 1;
 }
 
