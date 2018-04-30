@@ -192,7 +192,7 @@ changeOriginText.addEventListener("click", switchText, false);
 //Added in accuracy calculation (based on total words in text - errors / words in text * 100) which gives accuracy percentage - Complete!
 //get text to start with array - Complete!
 
-//========== Would like to do Below ==================
+//========== TODO  ==================
 //Still need to add in functionality for message of being unable to change text during test (condition is once timer is greater than 0). Want to remove horrid alert message
 //get word count to show up immediately for each text
 //arrow buttons for cycling foward and backward through manyText array
