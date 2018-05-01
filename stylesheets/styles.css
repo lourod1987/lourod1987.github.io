@@ -283,7 +283,7 @@ original pixel values:
   
   .skill-jquery {
     grid-row-start: 1;
-    grid-column-start: 2
+    grid-column-start: 2;
   }
   
   .skill-js {
@@ -459,15 +459,15 @@ i {
 }
 
 .html5 {
-  color: #FF4D0C;
+  color: #ff4d0c;
 }
 
 .css {
-  color: #0059A8;
+  color: #0059a8;
 }
 
 .js {
-  color: #EFD528;
+  color: #efd528;
 }
 
 

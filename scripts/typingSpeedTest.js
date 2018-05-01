@@ -69,8 +69,8 @@ function getWordCount(text, arrayCount) {
         for (var i = 0; i < containerArray.length; i++) {
             console.log("Inside for loop in getWordCount func:" + containerArray);
             separate = containerArray.split(" ");
-            console.log('result of separate action: ' + separate);
-            console.log('separate array length (should be word count): ' + separate.length);
+            console.log("result of separate action: " + separate);
+            console.log("separate array length (should be word count): " + separate.length);
             break;
         }
     }

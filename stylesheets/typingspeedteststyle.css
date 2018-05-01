@@ -8,7 +8,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -117,7 +117,7 @@ body {
 
 .title {
   padding: 1em 2em;
-  background-color: #0D1B2E;
+  background-color: #0d1b2e;
   color: white;
 }
 
@@ -128,7 +128,7 @@ body {
 .intro {
   padding: 2em 2em;
   color: #ffffff;
-  background: #04A777;
+  background-color: #04a777;
 }
 
 
@@ -184,26 +184,26 @@ body {
   padding: 1.5em 1.5em;
   font-size: 1.2em;
   font-weight: bold;
-  color: #E95D0F;
+  color: #e95d0f;
   background: white ;
-  border: 10px solid #E95D0F;
+  border: 10px solid #e95d0f;
   border-radius: 15px;
 }
 
 #btnFormat #reset:hover {
   color: white;
-  background-color: #E95D0F;
+  background-color: #e95d0f;
 }
 
 div#origin-text {
   border-radius: 15px;
-  border: 8px solid #0D1B2E;
+  border: 8px solid #0d1b2e;
   font-weight: 600;
   font-size: 16px;
 }
 
 .additionalData {
-  background-color: #04A777;
+  background-color: #04a777;
   color: white;
   padding: 10px;
   border-radius: 15px;

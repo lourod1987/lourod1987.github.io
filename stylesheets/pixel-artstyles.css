@@ -11,7 +11,7 @@ html {
 }
 
 div h1 {
-    font-family: 'Monofett', cursive;
+    font-family: "Monofett", cursive;
     color: whitesmoke;
     font-size: 90px;
     margin: 0.2em;
@@ -21,7 +21,7 @@ div h1 {
 div h2 {
     margin: 1em 0 0.25em;
     color: whitesmoke;
-    font-family: 'Mitr', sans-serif;
+    font-family: "Mitr", sans-serif;
     font-weight: bold;
 }
 
@@ -48,7 +48,7 @@ table {
 	box-shadow: 8px 8px 8px rgba(0, 0, 0, .25);
 /*	cursor: cell;*/
 	background-color: white;
-	cursor: url(/images/artCursor.png), auto;
+	cursor: url("../images/artCursor.png"), auto;
 }
 
 tr {
@@ -67,30 +67,30 @@ form {
     color: whitesmoke;
     font-weight: 800;
     font-size: 20px;
-    font-family: 'Mitr', sans-serif;
+    font-family: "Mitr", sans-serif;
 }
 
 button {
 	color: whitesmoke;
 	font-size: 18px;
-    background-color: #2EC9AD;
+    background-color: #2ec9ad;
     border-radius: 10px;
     padding: 0.5em;
-    font-family: 'Mitr', sans-serif;
+    font-family: "Mitr", sans-serif;
 	margin-bottom: 10px;
 	cursor: pointer;
 }
 
 button:hover {
-	background-color: #FF1500;
+	background-color: #ff1500;
 }
 
 .highlight {
-    border: 4px solid #FF4E00;
+    border: 4px solid #ff4E00;
 }
 
 .bg {
-    background-color: #DB0000;
+    background-color: #db0000;
 }
 
 
@@ -121,32 +121,32 @@ button:hover {
 #backtohome {
     margin: 20px;
     color: whitesmoke;
-    background-color: #477DFF;
+    background-color: #477dff;
 	font-size: 14px;
 }
 
 #backtohome:hover {
-	background-color: #477DCC;
+	background-color: #477dcc;
 }
 
 #reset {
-    background-color: #FF5000;
+    background-color: #ff5000;
 }
 
 #reset:hover {
-	background-color: #FF1500;
+	background-color: #ff1500;
 }
 
 #clear {
-	background-color: #F5BB00;
+	background-color: #f5bb00;
 }
 
 #clear:hover {
-	background-color: #FF1500;
+	background-color: #ff1500;
 }
 
 #imgBG {
-	background: url("/images/portSiteBG.png") no-repeat center center fixed;
+	background: url("../images/portSiteBG.png") no-repeat center center fixed;
 	min-height: 35vh;
 }
 
@@ -193,11 +193,11 @@ Note: not implemented in current revision
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
