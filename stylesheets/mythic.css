@@ -18,6 +18,21 @@ body {
   background-size: cover;
 }
 
+#backtohome {
+  display: block;
+  margin: 20px;
+  color: whitesmoke;
+  background-color: #477dff;
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+#backtohome:hover {
+	background-color: #477daa;
+}
+
 
 /* Header and Info Section
 ===============================*/
