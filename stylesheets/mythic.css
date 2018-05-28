@@ -377,7 +377,7 @@ span.close {
   
   section.info {
     font-size: 0.5rem;
-    min-width: 310px;
+    min-width: 265px;
     height: 50px;
     border-radius: 15px;
   }
@@ -415,7 +415,7 @@ span.close {
   
   .info {
     font-size: 0.9rem;
-    min-width: 375px;
+    min-width: 355px;
     height: 60px;
     border-radius: 20px;
     border: 0;
