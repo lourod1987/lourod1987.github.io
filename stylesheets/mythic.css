@@ -482,14 +482,17 @@ span.close {
   
   .incorrect {
     will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 
   .selected {
     will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 
   .correct {
     will-change: transform;
+    transform: translate3d(0, 0, 0);
   }
 }
 
