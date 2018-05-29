@@ -479,6 +479,18 @@ span.close {
     border-radius: 15px;
     font-size: 1rem;
   }
+  
+  .incorrect {
+    will-change: transform;
+  }
+
+  .selected {
+    will-change: transform;
+  }
+
+  .correct {
+    will-change: transform;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-width: 36em) {
