@@ -95,7 +95,7 @@ $(document).ready( () => {
     const $rating = $(".rating");;
     let copy = emptyStar.slice(0);
     switch (moves) {
-      case 13:
+      case 15:
         starLossAudio.play();
         $("#fifth").remove();
         $rating.append(copy);
