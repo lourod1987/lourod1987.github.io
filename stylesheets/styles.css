@@ -166,7 +166,7 @@ original pixel values:
   
   main .skillset {
     display: grid;
-    grid-template-rows: 310px 590px 1fr;
+    grid-template-rows: 470px 610px 1fr;
     grid-gap: 20px;
     justify-items: center;
   }
@@ -242,13 +242,6 @@ original pixel values:
     grid-column-end: span 2;
   }
   
-  main .skillset {
-    display: grid;
-    grid-template: 1fr 300px / 1fr 1fr;
-    grid-gap: 20px;
-    justify-items: center;
-  }
-  
   main div.about-me-text {
     display: inline-grid;
     grid-template: 280px 815px 1fr/ 1fr 1fr;
@@ -270,8 +263,8 @@ original pixel values:
   
   main .skillset {
     display: grid;
-    grid-template: 290px 1fr / 1fr 1fr;
-    grid-gap: 20px;
+    grid-template: 460px 1fr / 1fr 1fr;
+    grid-gap: 30px;
     justify-content: center;
   }
   
@@ -489,12 +482,12 @@ i {
 }
 
 .skill-html li {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .skill-html li img {
   max-width: 95%;
-  margin-bottom: -10px;
+  margin-top: 10px;
 }
 
 .skill-js {
@@ -512,6 +505,10 @@ i {
 
 .skill-jquery {
   justify-content: flex-end;
+}
+
+.skill-jquery li {
+  margin-bottom: 30px;
 }
 
 .skill-jquery li img {
