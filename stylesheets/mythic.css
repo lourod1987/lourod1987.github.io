@@ -480,19 +480,19 @@ span.close {
     font-size: 1rem;
   }
   
-  .incorrect {
+  .incorrect::before {
     will-change: transform;
-    transform: translate3d(0, 0, 0);
+/*    transform: translate3d(0, 0, 0);*/
   }
 
-  .selected {
+  .selected::before {
     will-change: transform;
-    transform: translate3d(0, 0, 0);
+/*    transform: translate3d(0, 0, 0);*/
   }
 
-  .correct {
+  .correct::before {
     will-change: transform;
-    transform: translate3d(0, 0, 0);
+/*    transform: translate3d(0, 0, 0);*/
   }
 }
 
