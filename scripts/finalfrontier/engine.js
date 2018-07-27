@@ -381,17 +381,17 @@ var Engine = (function(global) {
 
     //loads required resources
     Resources.load([
-        'images/blue_space_scape_by_heatstroke99-d331bty.png',
-        'images/splashScreen_v1.png',
-        'images/tileable-nebula.png',
-        'images/asteroid.png',
-        'images/Health.png',
-        'images/explosion_v1.png',
-        'images/laser.png',
-        'images/enemyLaser.png',
-        'images/enemyShip_v1.png',
-        'images/enemyShip_v2.png',
-        'images/playerShip_v3.png'
+        'images/finalfrontier/blue_space_scape_by_heatstroke99-d331bty.png',
+        'images/finalfrontier/splashScreen_v1.png',
+        'images/finalfrontier/tileable-nebula.png',
+        'images/finalfrontier/asteroid.png',
+        'images/finalfrontier/Health.png',
+        'images/finalfrontier/explosion_v1.png',
+        'images/finalfrontier/laser.png',
+        'images/finalfrontier/enemyLaser.png',
+        'images/finalfrontier/enemyShip_v1.png',
+        'images/finalfrontier/enemyShip_v2.png',
+        'images/finalfrontier/playerShip_v3.png'
     ]);
     Resources.onReady(gameController); //once required resources are loaded the gameController function is called
 
