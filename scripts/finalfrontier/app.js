@@ -13,7 +13,7 @@ UI creation components
 */
 class TitleScreen {
     constructor() {
-        this.titleBG = 'images/blue_space_scape_by_heatstroke99-d331bty.png';
+        this.titleBG = 'images/finalfrontier/blue_space_scape_by_heatstroke99-d331bty.png';
         this.run = true;
         this.gameState = 0;
         this.x = 0;
@@ -228,9 +228,9 @@ Game entities
 class Enemy {
     constructor(sprite, x, y, width, height, shoots) {
         this.sprite = sprite;
-        this.enemyShip1 = 'images/enemyShip_v1.png';
-        this.enemyShip2 = 'images/enemyShip_v2.png';
-        this.asteroid = 'images/asteroid.png';
+        this.enemyShip1 = 'images/finalfrontier/enemyShip_v1.png';
+        this.enemyShip2 = 'images/finalfrontier/enemyShip_v2.png';
+        this.asteroid = 'images/finalfrontier/asteroid.png';
         this.x = x;
         this.y = y;
         this.width = width;
@@ -409,7 +409,7 @@ class Upgrades extends Enemy {
 //Creates, moves, and gives audio to bullet objects
 class Bullet {
     constructor(x, y) {
-        this.bullet = 'images/laser.png';
+        this.bullet = 'images/finalfrontier/laser.png';
         this.x = x;
         this.y = y;
         this.width = 10;
@@ -445,7 +445,7 @@ class Bullet {
 class EnemyBullet extends Bullet {
     constructor(x, y, minBoundsX, maxBoundsX, minBoundsY, maxBoundsY) {
         super(x, y, minBoundsX, maxBoundsX, minBoundsY, maxBoundsY);
-        this.bullet = 'images/enemyLaser.png';
+        this.bullet = 'images/finalfrontier/enemyLaser.png';
         this.width = 20;
         this.height = 30;
         this.shotSound = document.getElementById('enemyShotSound');
@@ -477,7 +477,7 @@ class EnemyBullet extends Bullet {
 //Creates, places initially, enables user control, sets health, and bounds of player avatar
 class Player {
     constructor(x, y) {
-        this.sprite = 'images/playerShip_v3.png';
+        this.sprite = 'images/finalfrontier/playerShip_v3.png';
         this.x = x;
         this.y = y;
         this.width = 50;
@@ -560,7 +560,7 @@ class Player {
 //Creates an explosion on screen 
 class Explosion {
     constructor(x, y) {
-        this.explosion = 'images/explosion_v1.png';
+        this.explosion = 'images/finalfrontier/explosion_v1.png';
         this.x = x;
         this.y = y;
         this.explosionSound = document.getElementById('explosionSound');
@@ -576,11 +576,11 @@ const game = new Game();
 
 //these objects create the rendered title screen
 const title = new TitleScreen();
-const splashImg = new BG('images/splashScreen_v1.png', 150, 50);
+const splashImg = new BG('images/finalfrontier/splashScreen_v1.png', 150, 50);
 const textTitle = new FlashingText('bold 24px Orbitron, sans-serif', 'Press "Enter" to Begin', 260, 460);
 
 //creates the scrolling background for the game
-const scroll = new ScrollBG('images/tileable-nebula.png', 0, 0, 0, -600);
+const scroll = new ScrollBG('images/finalfrontier/tileable-nebula.png', 0, 0, 0, -600);
 
 //game ui
 const uiBG = new SquareUI(630, 10, 160, 110, 'rgba(255, 255, 255, 1)');
@@ -637,13 +637,13 @@ function bulletChecks() {
                bulletArr[j].y < allEnemies[i].y + allEnemies[i].height &&
                bulletArr[j].y + bulletArr[j].height > allEnemies[i].y) {
                    
-                if (allEnemies[i].sprite === 'images/asteroid.png') {
+                if (allEnemies[i].sprite === 'images/finalfrontier/asteroid.png') {
                     score.score += 10;
                 }
-                if (allEnemies[i].sprite === 'images/enemyShip_v1.png') {
+                if (allEnemies[i].sprite === 'images/finalfrontier/enemyShip_v1.png') {
                     score.score += 20;
                 }
-                if (allEnemies[i].sprite === 'images/enemyShip_v2.png') {
+                if (allEnemies[i].sprite === 'images/finalfrontier/enemyShip_v2.png') {
                     score.score += 30;
                 }
         
@@ -726,17 +726,17 @@ function createEnemyShips(name, sprite, x, y) {
         shoots;
 
     switch(sprite) {
-        case 'images/enemyShip_v1.png':
+        case 'images/finalfrontier/enemyShip_v1.png':
             width = 69;
             length = 79;
             shoots = false;
             break;
-        case 'images/enemyShip_v2.png':
+        case 'images/finalfrontier/enemyShip_v2.png':
             width = 80;
             length = 80;
             shoots = true;
             break;
-        case 'images/asteroid.png':
+        case 'images/finalfrontier/asteroid.png':
             width = 70;
             length = 90;
             shoots = false;
@@ -754,11 +754,11 @@ function createUpgrades(name, sprite, x, y) {
         length;
 
     switch(sprite) {
-        case 'images/GemGreen.png':
+        case 'images/finalfrontier/GemGreen.png':
             break;
-        case 'images/GemBlue.png':
+        case 'images/finalfrontier/GemBlue.png':
             break;
-        case 'images/GemOrange.png':
+        case 'images/finalfrontier/GemOrange.png':
             break;
     }
 
@@ -787,7 +787,7 @@ const loseReturnText = new Text('bold 18px Orbitron, sans-serif', 'Press "Esc" t
 //These objects control the player ui which update and give informaion on current time and health
 const time = new TimeText('bold 18px Orbitron, sans-serif', 'Time: ', 640, 70);
 const healthText = new Text('bold 18px Orbitron, sans-serif', 'Health:', 640, 100);
-const health = new Health('images/Health.png', 720, 80);
+const health = new Health('images/finalfrontier/Health.png', 720, 80);
 
 //creates a bullet object which I use to create additional bullets
 let bullet = new Bullet(player.x, player.y);
