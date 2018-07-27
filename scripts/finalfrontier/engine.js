@@ -2,6 +2,7 @@
             Redone Engine Build Code (for readability and architecture) 
 =====================================================================================
 */
+'use strict';
 var Engine = (function(global) {
 
     var doc = global.document,
@@ -10,18 +11,15 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    const modal = document.querySelector('.modal'),
-          retry = document.getElementById('play-again'),
-          close = document.getElementById('close');
-
-    const level1MusicLoop = document.getElementById("level1MusicLoop"),
-          gameWinMusic = document.getElementById("gameWinMusicLoop"),
-          startMusic = document.getElementById("startMusicLoop");
+    const level1MusicLoop = document.getElementById('level1MusicLoop'),
+          gameWinMusicLoop = document.getElementById('gameWinMusicLoop'),
+          startMusicLoop = document.getElementById('startMusicLoop');
 
     canvas.width = 800;
     canvas.height = 600;
     doc.body.appendChild(canvas);
 
+    //This function uses a switch to control which part of the game is running 
     function gameController() {
         lastTime = Date.now();
         switch (game.gameState) {
@@ -37,34 +35,29 @@ var Engine = (function(global) {
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 gameWin();
         }
-        
-        // win.requestAnimationFrame(gameController);
     }
 
+    //Resets all gameplay related values to original state.
     function reset() {
         time.timer = [0, 0];
         z = 0;
+        w = 0;
         score.score = 0;
         player.health = 3;
+        player.x = 200;
+        player.y = 380;
+        allEnemies = [];
+        bulletArr = [];
+        enemyBullets = [];
+        upgradesArr = [];
         ctx.clearRect(0,0,canvas.width,canvas.height);
         scroll.y = 0;
         scroll.y1 = -600;
-
-        if (allEnemies.length > 0) {
-            for (let j = 0; j <= allEnemies.length + 1; j++) {
-                allEnemies.splice(j, 1);
-            }
-        }
-        if (bulletArr.length > 0) {
-            for (let k = 0; k <= bulletArr.length + 1; k++) {
-                bulletArr.splice(k, 1);
-            }
-        }
         game.run = true;
-        // gameController();
     }
 
-    let startScreenMusic = 0;
+    //startScreen is the game loop for the first screen a user views
+    let startScreenMusic = false; //used to ensure music loop only plays once
     function startScreen() {
         renderTitle();
         
@@ -78,24 +71,25 @@ var Engine = (function(global) {
             textTitle.render();
         }
         
-        if (startScreenMusic === 0) {
+        if (startScreenMusic === false) {
             startMusicLoop.volume = 0.3;
             startMusicLoop.play();
             startMusicLoop.loop = true;
-            startScreenMusic++;
+            startScreenMusic = true;
         }
 
         if (game.gameState === 1) {
             startMusicLoop.pause();
             startMusicLoop.currentTime = 0;
-            i = 0;
+            startScreenMusic = false;
             gameController();
         }
     }
 
-    let k = 0;
+    //level1 is the game loop for the game
+    let level1Music = false;  //used to ensure music loop only plays once
     function level1() {
-        if (time.timer[0] === 1 && time.timer[1] > 29 && player.health > 0) {
+        if (time.timer[0] === 1 && time.timer[1] > 34 && player.health > 0) {
             game.gameState = 2;
             gameController();
         }
@@ -103,14 +97,15 @@ var Engine = (function(global) {
         var now = Date.now(),
             dt = (now - lastTime) / 1000.0;
         level1EnemySpawn();
+        enemyShoots();
         level1Update(dt);
         level1Render(dt);
 
-        if (k === 0) {
-            level1MusicLoop.volume = 0.05;
+        if (level1Music === false) {
+            level1MusicLoop.volume = 0.1;
             level1MusicLoop.play();
             level1MusicLoop.loop = true;
-            k++;
+            level1Music = true;
         }
         
 
@@ -120,42 +115,39 @@ var Engine = (function(global) {
         }
     }
 
-    let m = 0;
+    //gameWin is the game loop for the game win state
+    let gameWinMusic = false; //used to ensure music loop only plays once
     function gameWin() {
-        winUpdate();
         renderWin();
         level1MusicLoop.pause();
         level1MusicLoop.currentTime = 0;
-        k = 0;
+        level1Music = false;
 
-        if (m === 0) {
-            gameWinMusic.volume = 0.05;
-            gameWinMusic.play();
-            gameWinMusic.loop = true;
-            m++;
+        if (gameWinMusic === false) {
+            gameWinMusicLoop.volume = 0.05;
+            gameWinMusicLoop.play();
+            gameWinMusicLoop.loop = true;
+            gameWinMusic = true;
         }
 
         if (game.gameState === 0) {
-            gameWinMusic.pause();
-            gameWinMusic.currentTime = 0;
-            m = 0;
+            gameWinMusicLoop.pause();
+            gameWinMusicLoop.currentTime = 0;
+            gameWinMusic = false;
             reset();
             gameController();
         }
 
         if (game.gameState === 1) {
-            gameWinMusic.pause();
-            gameWinMusic.currentTime = 0;
-            m = 0;
+            gameWinMusicLoop.pause();
+            gameWinMusicLoop.currentTime = 0;
+            gameWinMusic = false;
+            reset();
             gameController();
         }
         
         if (game.gameState === 2) {
             win.requestAnimationFrame(gameWin);
-        }
-
-        function winUpdate() {
-            // winText.update();
         }
 
         function renderWin() {
@@ -165,63 +157,48 @@ var Engine = (function(global) {
             winNewGameText.render();
             winReturnText.render();
         }
-
-        
-        // if (i === 0) {
-        //     startMusicLoop.volume = 0.3;
-        //     startMusicLoop.play();
-        //     startMusicLoop.loop = true;
-        //     i++;
-        // }
     }
 
+    //game over loop
     function gameOver() {
-        game.run = false;
-        game.gameState = 5;
-        modal.classList.toggle('modal');
-        // modal.style.display = "visible";
+        renderLoss();
+        update();
 
-        function input() {
-            title.handleInput();
+        function renderLoss() {
+            gameOverUI.render();
+            gameOverText.render();
+            gameOverText1.render();
+            loseNewGameText.render();
+            loseReturnText.render();
         }
 
         function update() {
             switch (game.gameState) {
                 case 0:
-                    modal.style.display = "none";
+                    level1MusicLoop.pause();
+                    level1MusicLoop.currentTime = 0;
+                    level1Music = false;
+                    game.gameState = 0;
                     reset();
                     gameController();
                     break;
                 case 1:
-                    modal.style.display = "none";
-                    // modal.classList.toggle('modal');
+                    level1MusicLoop.pause();
+                    level1MusicLoop.currentTime = 1;
+                    level1Music = false;
+                    game.gameState = 1;
                     reset();
                     gameController();
                     break;
                 case 5:
-                    input();
+                    win.requestAnimationFrame(gameOver);
                     break;
             }
         }
-        
-        retry.addEventListener("click", () => {
-            level1MusicLoop.pause();
-            level1MusicLoop.currentTime = 0;
-            k = 0;
-            game.gameState = 1;
-            update();
-        });
-
-        close.addEventListener("click", () => {
-            level1MusicLoop.pause();
-            level1MusicLoop.currentTime = 0;
-            k = 0;
-            game.gameState = 0;
-            update();
-        });
     }
 
-    let z = 0;
+    let z = 0; //locks spawning so that it only occurs a single time
+    //level1EnemySpawn creates enemy units at a designated time
     function level1EnemySpawn() {
         if (time.timer[1] === 5 && z < 1) {
             enemy0.spawn();
@@ -264,34 +241,90 @@ var Engine = (function(global) {
         }
     }
 
+    let w = 0; //locks enemy firing so that it only occurs a single time
+    //enemyShoots allows specific units to fire a single time at the set intervals
+    function enemyShoots() {
+        if (time.timer[1] === 35 && w < 1) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[1] === 40 && w < 2) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[1] === 45 && w < 3) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[1] === 50 && w < 4) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[1] === 55 && w < 5) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 0 && w < 6) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 5 && w < 7) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 10 && w < 8) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 15 && w < 9) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 20 && w < 10) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 25 && w < 11) {
+            enemyFire();
+            w++;
+        }
+        if (time.timer[0] === 1 && time.timer[1] === 30 && w < 12) {
+            enemyFire();
+            w++;
+        }
+    }
+
+    //updates the state of all objects in level1
     function level1Update(dt) {
         if (player.health <= 0) {
+            game.gameState = 5;
+            game.run = false;
             gameOver();
         }
 
-        if (explosionArr > 0) {
-            setTimeout( () => {delExplosion(`explosion${e}`);}, 2000);
+        if (explosionArr.length > 0) {
+            setTimeout( () => {delExplosion();}, 200);
         }
 
-        let r = 0;
-        if (explosionArr.length > 0) {
-            explosionArr[r].render();
-            r++;
-        }
+        explosionArr.forEach(function(explosion) {
+            explosion.render();
+        });
         
         time.update(dt);
         level1UpdateEntities(dt);
         player.bounds();
         bullet.bounds();
         checkCollision();
+        enemyBulletChecks();
         scroll.scroll(dt);
-        player.update(dt);
+        
         
         if (bulletArr.length > 0) {
-            bulletChecks();
+            setTimeout( () => {bulletChecks();}, 50);
         }
     }
 
+    //called from level1update this updates entities in the game
     function level1UpdateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
@@ -303,14 +336,16 @@ var Engine = (function(global) {
             bullet.update();
         });
 
-        player.update(dt); //?
+        enemyBullets.forEach(function(bullet) {
+            bullet.update();
+        });
+
         player.handleInput(); //?
     }
 
+    //renders all objects in level1
     function level1Render(dt) {
-        // Before drawing, clear existing canvas
-        // ctx.clearRect(0,0,canvas.width,canvas.height); //?
-        scroll.render();
+        scroll.render(dt);
         uiBG.render();
         ui.render();
         score.render();
@@ -320,7 +355,12 @@ var Engine = (function(global) {
         level1RenderEntities(dt);
     }
 
-    function level1RenderEntities(dt) {
+    //called from level1Render this updates the render all entities in the game
+    function level1RenderEntities() {
+        enemyBullets.forEach(function(bullet) {
+            bullet.render();
+        });
+
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
@@ -329,28 +369,31 @@ var Engine = (function(global) {
             bullet.render();
         });
 
-        let r = 0;
         if (explosionArr.length > 0) {
-            explosionArr[r].render();
-            r++;
+            explosionArr.forEach(function(explosion) {
+                explosion.render();
+            });
         }
-    
-        player.render(dt);
+        if(player.health > 0) {
+            player.render();
+        }
     }
 
+    //loads required resources
     Resources.load([
-        'images/finalfrontier/blue_space_scape_by_heatstroke99-d331bty.png',
-        'images/finalfrontier/splashScreen_v1.png',
-        'images/finalfrontier/tileable-nebula.png',
-        'images/finalfrontier/Rock.png',
-        'images/finalfrontier/Health.png',
-        'images/finalfrontier/particleBlue.png',
-        'images/finalfrontier/explosion.png',
-        'images/finalfrontier/laser.png',
-        'images/finalfrontier/enemyShip.png',
-        'images/finalfrontier/playerShip_v3.png'
+        'images/blue_space_scape_by_heatstroke99-d331bty.png',
+        'images/splashScreen_v1.png',
+        'images/tileable-nebula.png',
+        'images/asteroid.png',
+        'images/Health.png',
+        'images/explosion_v1.png',
+        'images/laser.png',
+        'images/enemyLaser.png',
+        'images/enemyShip_v1.png',
+        'images/enemyShip_v2.png',
+        'images/playerShip_v3.png'
     ]);
-    Resources.onReady(gameController);
+    Resources.onReady(gameController); //once required resources are loaded the gameController function is called
 
     global.ctx = ctx;
 })(this);
