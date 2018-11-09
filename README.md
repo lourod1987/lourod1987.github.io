@@ -4,7 +4,7 @@
 
 ## Purpose
 This repository serves as a record of my programming journey and work. 
-Projects currently completed are displayed at the my [portfolio](http://www.luisrodrigueziii.com/) website.   
+Projects currently completed are displayed at my [portfolio](http://www.luisrodrigueziii.com/) website.   
 Projects in progress can be found in this repository.
 
 #### Note
