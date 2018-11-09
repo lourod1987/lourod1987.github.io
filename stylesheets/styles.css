@@ -119,7 +119,7 @@ original pixel values:
   
   body main div.about-me-text {
     display: grid;
-    grid-template: 250px 920px 1580px 1fr / 1fr;
+    grid-template: 250px 880px 1450px 1fr / 1fr;
     grid-gap: 5px;
   }
   
@@ -166,7 +166,7 @@ original pixel values:
   
   main .skillset {
     display: grid;
-    grid-template-rows: 470px 610px 1fr;
+    grid-template-rows: 470px 770px 1fr;
     grid-gap: 20px;
     justify-items: center;
   }
@@ -180,11 +180,11 @@ original pixel values:
   }
   
   .skill-html {
-    grid-row-start: 2;
+    grid-row-start: 3;
   }
   
   .skill-js {
-    grid-row-start: 3;
+    grid-row-start: 2;
   }
   
   main div.about-me-text {
