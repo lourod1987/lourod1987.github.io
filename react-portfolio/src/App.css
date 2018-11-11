@@ -416,7 +416,7 @@ main {
   font-family: "Baumans", cursive;
   padding: 2em;
 /* Image courtesy of NASA note: this img version is edited by me for style*/
-  /* background: url("../../images/nasaNeutronStars_1920.jpg") no-repeat center center fixed; */
+  background: url("./images/nasaNeutronStars_1920.jpg") no-repeat center center fixed;
   background-size: cover;
   max-width: 100%;
   padding: 2em;
