@@ -64,7 +64,7 @@ class HomeContainer extends Component {
                             </li>
                             <li>
                             <h2>HTML &amp; CSS</h2>
-                            <a href="megaman-card.html" title="Link to Mega Man Card project">
+                            <a href="../../megaman-card.html" title="Link to Mega Man Card project">
                                 <img src={cardPreview} alt="Preview image of Mega Man Card project"/>
                                 </a>Mega Man Card
                             </li> 
