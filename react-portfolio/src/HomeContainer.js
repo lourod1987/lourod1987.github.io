@@ -5,7 +5,8 @@ import cardPreview from './images/megamanPreview.jpg';
 import speedTestPreview from './images/typingSpeedTestPreview.jpg';
 import mythicPreview from './images/mythicPreview.jpg';
 import pixelPreview from './images/pixelArtPreview.jpg';
-import askLibbiePreview from './images/pixelArtPreview.jpg';
+import askLibbiePreview from './images/Ask-Libbie-App-preview.png';
+import myReadsPreview from './images/Book-Reads-App.png';
 
 class HomeContainer extends Component {
     render() {
@@ -95,12 +96,12 @@ class HomeContainer extends Component {
                         <ul class="projects">
                             <li>
                                 <a href="https://condescending-easley-7ba459.netlify.com/" title="Link to Ask Libbie React App">
-                                    <img src="images/Ask-Libbie-App-preview.png" alt="Preview image of Ask Libbie App"/>
+                                    <img src={askLibbiePreview} alt="Preview image of Ask Libbie App"/>
                                 </a>Ask&nbsp;Libbie&nbsp;App
                             </li>
                             <li>
                                 <a href="https://dazzling-shirley-f40879.netlify.com/" title="Link to My Reads React App">
-                                    <img src="images/Book-Reads-App.png" alt="Preview image of My Reads App"/>
+                                    <img src={myReadsPreview} alt="Preview image of My Reads App"/>
                                 </a>My&nbsp;Reads&nbsp;App
                             </li>
                         </ul>
