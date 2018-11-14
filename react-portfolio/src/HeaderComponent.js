@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from './images/orangeTinyDragon_v1.png';
 
 class HeaderComponent extends Component {
@@ -16,10 +17,14 @@ class HeaderComponent extends Component {
                         <nav>
                             <ul>
                             <li>
-                                <a href="index.html" title="Link back to Home page">Home</a>
+                                <Link to="/">
+                                    Home
+                                </Link>
                             </li>
                             <li>
-                                <a href="about-me.html" title="Link to About Me page">About&nbsp;Me</a>
+                                <Link to="/about-me">
+                                    About&nbsp;Me
+                                </Link>
                             </li>
                             {/* <li>
                                 <a href="portfolio-page.html" title="Link to Portfolio Examples page">Portfolio</a>
