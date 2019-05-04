@@ -15,7 +15,7 @@ class HomeContainer extends Component {
         myState: ''
     }
 
-    rand = () => {
+    rand = () => { 
         this.setState( {myState: 'hello'} )
         console.log('cur state: ' + this.state.myState)
     }
@@ -42,14 +42,14 @@ class HomeContainer extends Component {
                             <h2>Collaboration</h2>
                             <ul className="projects">
                                 <li>
-                                    <a href="https://goo.gl/tiUrxH" title="Link to Collaboration project" target="_blank">
-                                    <img src={collabPreview} alt="Preview image of Collaboration project"/>
+                                    <a href="https://goo.gl/tiUrxH" title="Link to Collaboration project" target="_blank" rel="noopener noreferrer">
+                                        <img src={collabPreview} alt="Preview of Collaboration project"/>
                                     </a>Grow with Google Scholar Project
                                 </li>
                                 <li>
                                 <h2>HTML &amp; CSS</h2>
-                                <a href="../../megaman-card.html" title="Link to Mega Man Card project">
-                                    <img src={cardPreview} alt="Preview image of Mega Man Card project"/>
+                                <a href="https://lourod1987.github.io/megaman-card" title="Link to Mega Man Card project">
+                                    <img src={cardPreview} alt="Preview of Mega Man Card project"/>
                                     </a>Mega Man Card
                                 </li> 
                             </ul>
@@ -58,19 +58,19 @@ class HomeContainer extends Component {
                             <h2>JavaScript</h2>
                             <ul className="projects">
                                 <li>
-                                <a href="typing-speed-test.html" title="Link to Typing Speed Test made with JS Example">
-                                    <img src={speedTestPreview} alt="Preview image of Typing Speed Test project"/>
+                                <a href="https://lourod1987.github.io/typing-speed-test" title="Link to Typing Speed Test made with JS Example">
+                                    <img src={speedTestPreview} alt="Preview of Typing Speed Test project"/>
                                 </a>Typing&nbsp;Speed&nbsp;Test
                                 </li>
                                 <li>
                                 <h2>jQuery</h2>
-                                    <a href="mythic-matching.html" title="Link to Matching Game">
-                                    <img src={mythicPreview} alt="Preview image of Pixel Art Maker project"/>
+                                    <a href="https://lourod1987.github.io/mythic-matching" title="Link to Matching Game">
+                                        <img src={mythicPreview} alt="Preview of Pixel Art Maker project"/>
                                     </a>Mythic&nbsp;Matching&nbsp;Game
                                 </li>
                                 <li>
-                                <a href="pixel-art.html" title="Link to Pixel Art Project made with jQuery">
-                                    <img src={pixelPreview} alt="Preview image of Pixel Art Maker project"/>
+                                <a href="https://lourod1987.github.io/pixel-art" title="Link to Pixel Art Project made with jQuery">
+                                    <img src={pixelPreview} alt="Preview of Pixel Art Maker project"/>
                                 </a>Pixel&nbsp;Art&nbsp;Project
                                 </li>
                             </ul>
@@ -80,12 +80,12 @@ class HomeContainer extends Component {
                             <ul className="projects">
                                 <li>
                                     <a href="https://condescending-easley-7ba459.netlify.com/" title="Link to Ask Libbie React App">
-                                        <img src={askLibbiePreview} alt="Preview image of Ask Libbie App"/>
+                                        <img src={askLibbiePreview} alt="Preview of Ask Libbie App"/>
                                     </a>Ask&nbsp;Libbie&nbsp;App
                                 </li>
                                 <li>
                                     <a href="https://dazzling-shirley-f40879.netlify.com/" title="Link to My Reads React App">
-                                        <img src={myReadsPreview} alt="Preview image of My Reads App"/>
+                                        <img src={myReadsPreview} alt="Preview of My Reads App"/>
                                     </a>My&nbsp;Reads&nbsp;App
                                 </li>
                             </ul>

@@ -13,7 +13,7 @@ class AboutContainer extends Component {
                     <figure>
                         <img id="loupic" src={sketch} alt="Sketch of me done by Frances Chen"/>
                         <figcaption>
-                        Sketch by <a href="https://github.com/frances-chen" target="_blank">Frances Chen</a>
+                        Sketch by <a href="https://github.com/frances-chen" target="_blank" rel="noopener noreferrer">Frances Chen</a>
                         </figcaption>
                     </figure>
                     <section class="who-i-am">
